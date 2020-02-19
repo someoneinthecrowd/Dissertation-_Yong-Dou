@@ -7,21 +7,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{introduction}
-Traveling waves of mechanical actuation provide a versatile strategy for locomotion and transport in both natural and engineered systems across many scales. These rhythmic motor patterns are often orchestrated by systems of coupled oscillators such as beating cilia or firing neurons. Here, we show that similar motions can be realized within linear arrays of conductive particles that oscillate between biased electrodes through cycles of contact charging and electrostatic actuation. The repulsive interactions among the particles along with spatial gradients in their natural frequencies lead to phase locked states characterized by gradients in the oscillation phase. The frequency and wavelength of these traveling waves can be specified independently by varying the applied voltage and the electrode separation. We demonstrate how traveling wave synchronization can enable the directed transport of material cargo. Our results suggest that simple energy inputs can coordinate complex motions with opportunities for soft robotics and colloidal machines.
 
-Traveling waves of mechanical actuation provide a versatile strategy for locomotion and transport in both natural\autocite{Cohen1982, Blake1974, Taylor447} and engineered\autocite{Ijspeert2008, Palagi2016, Park2016, Masuda2016, Yashin2012} systems across many scales. In vertebrates such as the aquatic lamprey \autocite{Cohen1982, Cohen1992}, these and other rhythmic motor patterns are orchestrated by networks of neurons called central pattern generators (CPGs) \autocite{Marder2001}, which are often idealized as systems of coupled oscillators \autocite{Cohen1982, Cohen1992}. The rhythmic output of these oscillators is relayed to actuators (e.g., muscles) to produce complex motions without the need for sensory feedback. Similar control strategies based on CPGs are used to direct  locomotion in macroscopic robots \autocite{Ijspeert2008}. At smaller scales, however, it becomes increasingly challenging to accommodate centralized control systems capable of directing the coordinated actions of multiple actuators. Instead, microorganisms such as ciliated protozoa integrate pattern generation and mechanical actuation within a single material system.  The oscillatory motions of beating cilia couple to one another through hydrodynamic interactions to produce metachronal waves that drive cellular locomotion through viscous surroundings \autocite{Blake1974, Niedermayer2008, Elgeti2013}. This biological example illustrates how the coupled motions of many mechanical oscillators can organize spontaneously and autonomously to perform dynamic functions.
+Traveling waves of mechanical actuation provide a versatile strategy for locomotion and transport in both natural\autocite{Cohen1982, Blake1974, Taylor447, purcell1977life} and engineered\autocite{Palagi2016,Park2016} systems across many scales. In vertebrates such as the aquatic lamprey \autocite{Cohen1982, Cohen1992}, these and other rhythmic motor patterns are orchestrated by networks of neurons called central pattern generators (CPGs) \autocite{Marder2001}, which are often idealized as systems of coupled oscillators \autocite{Cohen1982, Cohen1992}. The rhythmic output of these oscillators is relayed to actuators (e.g., muscles) to produce complex motions without the need for sensory feedback. Similar control strategies based on CPGs are used to direct  locomotion in macroscopic robots \autocite{Ijspeert2008}. At smaller scales, however, it becomes increasingly challenging to accommodate centralized control systems capable of directing the coordinated actions of multiple actuators. Instead, microorganisms such as ciliated protozoa integrate pattern generation and mechanical actuation within a single material system.  The oscillatory motions of beating cilia couple to one another through hydrodynamic interactions to produce metachronal waves that drive cellular locomotion through viscous surroundings \autocite{Blake1974, Niedermayer2008, Elgeti2013}. This biological example illustrates how the coupled motions of many mechanical oscillators can organize spontaneously and autonomously to perform dynamic functions.}
 
-The realization of synthetic systems that mimic such functions requires experimental strategies for powering mechanical oscillators and for coupling their motions to achieve the desired dynamics. One approach relies on coupling reaction-diffusion patterns to the mechanical deformation of responsive gels, for example, to achieve traveling wave motions in excitable media\autocite{Yashin2012,Masuda2016}. Despite fascinating demonstrations of this approach on millimeter length scales, it remains challenging to miniaturize due to the need for faster reactions that compete with diffusion at smaller scales. To achieve scalable mechanisms of pattern formation, the processes that drive oscillations should scale in the same way as those used to couple neighboring oscillators. In this context, electromechanical oscillators based on contact charge electrophoresis (CCEP) \autocite{bishop2018contact, drews2015contact} can provide a useful model on length scales spanning millimeters\autocite{Mersch2011} to microns\autocite{Dou2016} (perhaps even nanometers \autocite{Park2000,Kowalik2016}). 
-
+The realization of synthetic systems that mimic such functions requires experimental strategies for powering mechanical oscillators and for coupling their motions to achieve the desired dynamics. One approach relies on coupling reaction-diffusion patterns to the mechanical deformation of responsive gels, for example, to achieve traveling wave motions in excitable media \autocite{Masuda2016}. Despite fascinating demonstrations of this approach on millimeter length scales, it remains challenging to miniaturize due to the need for faster reactions that compete with diffusion at smaller scales. To achieve scalable mechanisms of pattern formation, the processes that drive oscillations should scale in the same way as those used to couple neighboring oscillators. In this context, electromechanical oscillators based on contact charge electrophoresis (CCEP) \autocite{Bishop2017, Drews2015} can provide a useful model on length scales spanning millimeters\autocite{Mersch2011} to microns\autocite{Dou2016} (perhaps even nanometers \autocite{Park2000,Kowalik2016}).
 CCEP refers to the back-and-forth motion of a conductive particle \resp{through an insulating fluid separating} two electrodes subject to a constant voltage. \resp{The particle charges on contact with either electrode and moves down the applied potential gradient, thereby transporting charge between the biased electrodes. This type of electromechanical oscillator is fundamentally distinct from the weakly damped harmonic oscillators of micro-electromechanical systems (MEMS)\autocite{van2011review,Zhang2014}, which rely on resonant excitation by time-varying fields. By contrast, CCEP oscillators are powered by a constant thermodynamic driving force and operate even under conditions of strong damping, which arise at small scales and in viscous environments.  Similar to those of molecular motors\autocite{Kolomeisky2007,Kowalik2016}, CCEP motions can be rectified to perform mechanical work or to transport material cargo\autocite{drews2013ratcheted,Kowalik2016}. Moreover,} the charge acquired by the particle and the forces driving its motion are well described by classical electrostatics, which is invariant to changes in scale. The discovery of new CCEP motions at the macroscale is therefore transferable to emerging applications at the microscale\autocite{bishop2018contact}.
-
 Here, we investigate the collective dynamics of many CCEP oscillators positioned along a linear array between two (nearly) parallel electrodes (Fig.~\ref{fig:1}a). Each oscillator is comprised of a conductive sphere that moves back and forth between the electrodes along a dielectric track.  Oscillatory motions are driven by the repeated charging of the particles on contact with either electrode and their subsequent movement in the applied field. The dynamics of neighboring oscillators are coupled to one another through the electrostatic interactions between the charged particles. We show how this electrostatic coupling mediates the organization of phase-locked states in which all oscillators move with a common frequency. Interestingly, the distribution of oscillator phases at steady state corresponds to traveling waves of particle motion with a characteristic wavelength comparable to the electrode separation. These experimental observations are explained by a Kuramoto-like model\autocite{Acebron2005,Tsimring2005} that accounts for weak repulsive coupling between neighboring phase oscillators and for small systematic variations in their natural frequencies. We demonstrate how traveling wave synchronization can be used to transport material cargo along the length of the oscillator array. More generally, our approach shows how simple energy inputs can power complex patterns of mechanical actuation, which may be useful in powering the motions of soft robots\autocite{rus2015design, acome2018hydraulically} and colloidal machines\autocite{Snezhko2011,Yan2012, Martinez-Pedrero2015, goodrich2017using, Driscoll2017}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[p!]
     \centering
     \includegraphics[width=10cm]{figures/3_1.pdf}
-    \caption{\textbf{Travelling wave synchronization.} (a) Conductive spheres immersed in mineral oil oscillate along dielectric tracks connecting two plane electrodes subject to a constant voltage $V$. Particles charge on contact with each electrode and move in the electric field $E$. (b) Oscillatory dynamics of a single particle showing its position $h$  as a function of time $t$; yellow markers denote contacts with the electrodes. The applied voltage is $V=19$ kV; the electrode separation is $L=25$ mm. (c) Oscillation frequency $\omega_n$ as a function of the position $n$ along the array. The natural frequency of each oscillator varies with position (solid markers); all oscillators move with a common frequency in the synchronized state (open markers). Error bars represent the standard deviation in the instantaneous frequency, $2\pi/(t_{k+1}-t_k)$, over 100 cycles. (d) Image of the experiment showing particle positions at successive times; scale bar is 3 mm. (e) Space-time plot of the oscillator phase $\varphi$ showing the emergence of traveling wave synchronization for the $N=23$ oscillators in (c) starting from a random initial configuration.  Here, the track period is $W=3$ mm; other parameters are listed in (b).}
+    \caption{Travelling wave synchronization. (a) Conductive spheres immersed in mineral oil oscillate along dielectric tracks connecting two plane electrodes subject to a constant voltage $V$. Particles charge on contact with each electrode and move in the electric field $E$. (b) Oscillatory dynamics of a single particle showing its position $h$  as a function of time $t$; yellow markers denote contacts with the electrodes. The applied voltage is $V=19$ kV; the electrode separation is $L=25$ mm. (c) Oscillation frequency $\omega_n$ as a function of the position $n$ along the array. The natural frequency of each oscillator varies with position (solid markers); all oscillators move with a common frequency in the synchronized state (open markers). Error bars represent the standard deviation in the instantaneous frequency, $2\pi/(t_{k+1}-t_k)$, over 100 cycles. (d) Image of the experiment showing particle positions at successive times; scale bar is 3 mm. (e) Space-time plot of the oscillator phase $\varphi$ showing the emergence of traveling wave synchronization for the $N=23$ oscillators in (c) starting from a random initial configuration.  Here, the track period is $W=3$ mm; other parameters are listed in (b).}
     \label{fig:1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,6 +27,67 @@ Here, we investigate the collective dynamics of many CCEP oscillators positioned
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methods}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Experiment Set-up.} 
+Periodic arrays of dielectric tracks were 3D printed in acrylonitrile butadiene styrene (ABS) with a period of $W=3-5$ mm. The array was sandwiched between two copper plates separated by a distance $L=10-30$ mm (McMaster-Carr 3350K201) and immersed in mineral oil (Sigma Aldrich CAS No.~8042-47-5). The tracks were aligned perpendicular to the electrode surfaces and to the direction of gravity. Each track contained a single copper sphere (McMaster-Carr No.~64715K16, radius $a=1$ mm), which rolled freely between the two electrodes (Fig.~\ref{fig:1}a). Prior to use, the system was heated in a 60$^\text{o}$C oven for several hours to remove any moisture. The copper electrodes were connected to a amplifier (Trek 20/20C) with an output voltage $V=0-20$ kV.  The particles were illuminated from below by a light emitting diode (LED) and their motions captured by a high-speed camera (Phantom V310).  During each experiment, the electrodes were energized to a specified voltage and the resulting particle motions captured. The voltage was switched off for at least one minute between successive experiments to allow for the dissipation of any space charge accumulated on the surfaces of the tracks and/or the electrodes.  Particle location data were extracted using standard image tracking routines in MATLAB.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Electrostatic Interactions.}
+We first consider a single point charge $q$ positioned at a height $z=h$ between two grounded planes at $z=0$ and $z=L$.  The resulting electrostatic potential at point $\ve{x}$ is 
+\begin{equation}
+    \phi(\ve{x}) = \frac{q}{\pi L \varepsilon} \sum_{m=1}^{\infty} \sin\left(\frac{m\pi h}{L}\right)  \sin\left(\frac{m\pi z}{L}\right) K_0\left(\frac{m \pi r}{L}\right),\label{eq:point}
+\end{equation}
+where $r=\sqrt{x^2 + y^2}$ is the radial distance from the charge, and $K_0(~)$ is the zeroth order modified Bessel function of the second kind. For large arguments, the Bessel function decays exponentially as $K_0(s)\rightarrow e^{-s}\sqrt{\pi/2 s} $; the infinite series can be truncated for some $m\gg L/\pi r$ to obtain an accurate approximation.  The corresponding electric field in the $z$-direction is given by $E_z = -\partial \phi / \partial z$. 
+
+\resp{We now consider how the disturbance field $E'$ due to one oscillator $i$ influences the dynamics of another oscillator $j$ in the limit of weak coupling. At zeroth order in $E'$, the phase of each oscillator increases at a constant rate $\omega_{\ro}$ such that $\varphi_i=\omega_{\ro} t$ and $\varphi_j=\omega_{\ro} t+\chi$, where $\chi=\varphi_j-\varphi_i$ is the constant phase difference.  The charge $q=q(\varphi)$ and position $h=h(\varphi)$ of each oscillator depends on the phase as shown in Figure~\ref{fig:4}a. At first order in $E'$, the disturbance in the phase of oscillator $j$ evolves as
+\begin{equation}
+    \frac{d \varphi'_j}{d t} = \frac{\pi n(\varphi_j)}{L\gamma} \left[q(\varphi_j) E'(\varphi_i,\varphi_j) + q'(\varphi_i,\varphi_j) E_{\ro} +\dots\right], \label{eq:j}
+\end{equation}
+where the factor $\pi n(\varphi_j)/L\gamma$ relates the electric force to the corresponding phase velocity with $n(\varphi_j)=\pm 1$ indicating the direction of travel. The bracketed terms describe two types of electrostatic interactions. First, the disturbance field due to particle $i$ drives particle $j$ to move faster or slower between the electrodes. Using the point charge solution (\ref{eq:point}), this disturbance $E'(\varphi_i,\varphi_j)$ is given by
+\begin{equation}
+    E'(\varphi_i,\varphi_j) = -\frac{q(\varphi_i)}{L^2 \varepsilon} \sum_{m=1}^{\infty} m \sin\left(\frac{m\pi h(\varphi_i)}{L}\right)  \cos\left(\frac{m\pi h(\varphi_j)}{L}\right) K_0\left(\frac{m \pi W}{L}\right),
+\end{equation}
+where $W$ is the oscillator spacing. Second, the disturbance field due to particle $i$ alters the charge acquired by particle $j$ on contact with either electrode; the disturbance charge $q'(\varphi_i,\varphi_j)$ is given by 
+\begin{equation}
+    q'(\varphi_i,\varphi_j) = \begin{cases} 
+    +\tfrac{2}{3}\pi^3 \varepsilon a^2  E'(-\chi,0) & 0 \leq \varphi_j < \pi
+    \\
+    -\tfrac{2}{3}\pi^3 \varepsilon a^2 E'(\pi-\chi,\pi) & \pi \leq \varphi_j < 2\pi
+    \end{cases}.
+\end{equation}
+Physically, the charge on particle $j$ is determined by its most recent contact with either electrode ($\varphi_j=0$ or $\pi$); the field due to particle $i$ at the time of that contact determines the disturbance charge.}
+
+We can now average these two interactions over one oscillation cycle to obtain the phase-averaged interaction function,
+\begin{equation}
+    f(\chi) = \frac{\pi}{L\gamma}\frac{1}{2 \pi}\int_0^{2\pi} n(\varphi_j) \left[ q(\varphi_j) E'(\varphi_j-\chi,\varphi_j) + q'(\varphi_j-\chi,\varphi_j) E_{\ro} \right] d\varphi_j.
+\end{equation}
+Carrying out the integration, each of the two electrostatic interactions produce contributions of the same mathematical form with the second term contributing twice that of the first,
+\begin{equation}
+     f(\chi) = \frac{3\pi q_{\ro}^2}{2  \varepsilon L^3\gamma} \sum_{m=1}^{\infty} m \sin(m \chi)  K_0\left(\frac{m\pi W}{L}\right).
+\end{equation}
+This final expression is plotted in Figure \ref{fig:4}b for the case of $W/L=0.12$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Stationary Solution.} 
+Starting from Eq.~(\ref{eq:phase}), we recast the oscillator dynamics in terms of the phase difference $\chi_n=\varphi_{n+1} - \varphi_n$ and the average phase $\Phi=\tfrac{1}{N}\sum_n\varphi_n$.  Taking the difference in the phase dynamics of successive oscillators, we obtain the following equation for the phase difference 
+\begin{equation}
+    \frac{\partial \chi_n}{\partial t} = \Delta - f(\chi_{n-1}) + 2 f(\chi_n) - f(\chi_{n+1})\quad\text{for }n=2,\dots,N-2, \label{eq:diff}
+\end{equation}
+which makes use of the fact that $f(~)$ is an odd function.  At the open boundaries of the array, the phase difference evolves as
+\begin{equation}
+    \frac{\partial \chi_1}{\partial t} = \Delta + 2f(\chi_1) - f(\chi_2)\quad\text{and}\quad\frac{\partial \chi_{N-1}}{\partial t} = \Delta - f(\chi_{N-2}) + 2f(\chi_{N-1}). \label{eq:diffBC}
+\end{equation}
+In addition to these $N-1$ equations, the dynamics of the $N$ oscillators is described by the that of the average phase, $\partial \Phi /\partial t = \omega_{\ro}$, which is fully decoupled from the phase differences. Setting the time derivatives in Eqs.~(\ref{eq:diff}) and (\ref{eq:diffBC}) equal to zero, the resulting recurrence equation can be solved to obtain the stationary solution, $f(\chi_n) = \tfrac{1}{2}\Delta n(n-N)$, presented in the main text. This solution exists provided that $f_{\max}>\tfrac{1}{8}N^2\lvert\Delta\rvert$ (Supplementary Note 2) and is stable when $f'(\chi_n)<0$ (Supplementary Note 3). The characteristic relaxation time for approaching the stationary state is given by the diffusive-like scaling relation $\tau\sim \chi_{\max}N^2/\pi^2 f_{\max}$.
+
+
+
 \section{Results}
 
 \subsection{Experiment}
@@ -56,7 +114,7 @@ The stability of the synchronized state and the distribution of oscillator phase
 \begin{figure}[p!]
     \centering
     \includegraphics[width=10cm]{figures/3_2.pdf}
-    \caption{\textbf{Characterization of travelling waves.} (a) $N=2$ oscillators moving in antiphase. The plot shows the sine of the oscillator phases (bottom); the space-time image shows the same data in a different way (top). (b) Space-time plot for $N=N^*=15$ oscillators showing 20 oscillation cycles. (c) Space-time plots for $N>N^*$ showing defects that occur at regular time intervals. The markers show points in the space-time lattice with five-fold (purple) and seven-fold (yellow) coordination. (d) Time-averaged phase difference $\chi_n$ as a function of position $n$ for $N=N^*$ oscillators. Data for (a-d) were collected with $L=25$ mm, $W=3$ mm, and $V=18$ kV.  (e) Characteristic wavelength $\lambda$ as a function of the electrode separation $L$ for $N=N^*$ and different oscillator spacings $W$. Error bars represent the standard deviation from five independent experiments.}
+    \caption{Characterization of travelling waves (a) $N=2$ oscillators moving in antiphase. The plot shows the sine of the oscillator phases (bottom); the space-time image shows the same data in a different way (top). (b) Space-time plot for $N=N^*=15$ oscillators showing 20 oscillation cycles. (c) Space-time plots for $N>N^*$ showing defects that occur at regular time intervals. The markers show points in the space-time lattice with five-fold (purple) and seven-fold (yellow) coordination. (d) Time-averaged phase difference $\chi_n$ as a function of position $n$ for $N=N^*$ oscillators. Data for (a-d) were collected with $L=25$ mm, $W=3$ mm, and $V=18$ kV.  (e) Characteristic wavelength $\lambda$ as a function of the electrode separation $L$ for $N=N^*$ and different oscillator spacings $W$. Error bars represent the standard deviation from five independent experiments.}
     \label{fig:2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +138,7 @@ where $\omega_n$ is the natural frequency, and the function $f(~)$ describes the
 \begin{figure}[p!]
     \centering
     \includegraphics[width=10cm]{figures/3_3.pdf}
-    \caption{\textbf{Minimal model of traveling wave synchronization.} (a) Charge $q$ and position $h$ of a idealized oscillator as a function of it phase $\varphi$. \resp{(b) Phase-averaged electrostatic interaction between two weakly-coupled oscillators as a function of their phase difference $\chi$. The interaction is scaled by $f_{\ro} = q_{\ro}^2/\varepsilon W^2 L \gamma$; the oscillator spacing is $W=0.12 L$. (c) Stable stationary solution for the phase difference $\chi_n$ of $N=15$ oscillators. Experimental data for the same conditions is reproduced for comparison. The predicted phase differences are plotted also in (b) to show their relationship with the interaction function $f(~)$. (d) Sine of the oscillator phase $\varphi_n$ showing the wave-like pattern.  (e) Dynamics of the $N=15$ oscillators starting from random initial conditions. (f) Oscillator dynamics for $N=20$ showing the periodic breaking of the traveling waves. In (c)--(e) the critical oscillator number is chosen to be $N^*=15.5$ as in experiment, which implies a frequency gradient $\Delta=0.0096 f_{\ro}$. The natural frequency is $\omega_{\ro}=\tfrac{3}{2\pi^2}(W/a)^2f_{\ro}=1.4 f_{\ro}$ where $W/a=3$ as in experiment; the ratio $\Delta/\omega_{\ro}=0.0070$ implies an electrode angle of $\theta=1.1^{\circ}$.}}
+    \caption{Minimal model of traveling wave synchronization. (a) Charge $q$ and position $h$ of a idealized oscillator as a function of it phase $\varphi$. \resp{(b) Phase-averaged electrostatic interaction between two weakly-coupled oscillators as a function of their phase difference $\chi$. The interaction is scaled by $f_{\ro} = q_{\ro}^2/\varepsilon W^2 L \gamma$; the oscillator spacing is $W=0.12 L$. (c) Stable stationary solution for the phase difference $\chi_n$ of $N=15$ oscillators. Experimental data for the same conditions is reproduced for comparison. The predicted phase differences are plotted also in (b) to show their relationship with the interaction function $f(~)$. (d) Sine of the oscillator phase $\varphi_n$ showing the wave-like pattern.  (e) Dynamics of the $N=15$ oscillators starting from random initial conditions. (f) Oscillator dynamics for $N=20$ showing the periodic breaking of the traveling waves. In (c)--(e) the critical oscillator number is chosen to be $N^*=15.5$ as in experiment, which implies a frequency gradient $\Delta=0.0096 f_{\ro}$. The natural frequency is $\omega_{\ro}=\tfrac{3}{2\pi^2}(W/a)^2f_{\ro}=1.4 f_{\ro}$ where $W/a=3$ as in experiment; the ratio $\Delta/\omega_{\ro}=0.0070$ implies an electrode angle of $\theta=1.1^{\circ}$.}}
     \label{fig:4}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,75 +165,11 @@ We have shown how arrays of electromechanical oscillators can organize spontaneo
 \begin{figure}[h]
     \centering
     \includegraphics[width=10cm]{figures/3_4.pdf}
-    \caption{
-    \textbf{Transport of air bubbles via travelling waves.} (a) Schematic illustration of the experimental set-up from the side. (b) Trajectories of four bubbles (white) superimposed over the space-time plot of the oscillator phase. See also Supplementary Movie 6.}
+    \caption{Transport of air bubbles via travelling waves. (a) Schematic illustration of the experimental set-up from the side. (b) Trajectories of four bubbles (white) superimposed over the space-time plot of the oscillator phase. See also Supplementary Movie 6.}
     \label{fig:5}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resp{Beyond this initial demonstration, traveling wave synchronization of CCEP oscillators may be useful for peristaltic pumping within microfluidic systems. Unlike standard pressure pumps, those based on traveling wave motions allow for recirculating flows\autocite{mi5020289} and would complement existing  applications of CCEP in microfluidic cargo transport\autocite{drews2013ratcheted,cartier2017electric}, separations\autocite{drews2013ratcheted}, and fluid mixing\autocite{cartier2014microfluidic}. These CCEP-powered unit operations rely on constant voltages at low input power, which makes them attractive for use in portable, battery-powered microfluidic devices\autocite{bishop2018contact}.  One important limitation of these oscillators is their reliance on the dielectric environment provided by non-polar fluids; CCEP motions cannot be sustained in even weakly conductive liquids such as deionized water\autocite{cartier2014microfluidic}. However, recent advances in soft robotics suggest one strategy for circumventing this limitation by encapsulating non-polar liquids in stretchable, impermeable compartments\autocite{acome2018hydraulically}. These soft composite materials can be deformed by applying voltages to stretchable electrodes patterned on their surfaces.  By incorporating arrays of CCEP oscillators within such dielectric compartments, it should be possible to create self-organized motions that drive transient deformations and thereby locomotion of soft robotic materials. } 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods}
+Beyond this initial demonstration, traveling wave synchronization of CCEP oscillators may be useful for peristaltic pumping within microfluidic systems. Unlike standard pressure pumps, those based on traveling wave motions allow for recirculating flows\autocite{mi5020289} and would complement existing  applications of CCEP in microfluidic cargo transport\autocite{drews2013ratcheted,cartier2017electric}, separations\autocite{drews2013ratcheted}, and fluid mixing\autocite{cartier2014microfluidic}. These CCEP-powered unit operations rely on constant voltages at low input power, which makes them attractive for use in portable, battery-powered microfluidic devices\autocite{bishop2018contact}.  One important limitation of these oscillators is their reliance on the dielectric environment provided by non-polar fluids; CCEP motions cannot be sustained in even weakly conductive liquids such as deionized water\autocite{cartier2014microfluidic}. However, recent advances in soft robotics suggest one strategy for circumventing this limitation by encapsulating non-polar liquids in stretchable, impermeable compartments\autocite{acome2018hydraulically}. These soft composite materials can be deformed by applying voltages to stretchable electrodes patterned on their surfaces.  By incorporating arrays of CCEP oscillators within such dielectric compartments, it should be possible to create self-organized motions that drive transient deformations and thereby locomotion of soft robotic materials.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Experiment Set-up.} 
-Periodic arrays of dielectric tracks were 3D printed in acrylonitrile butadiene styrene (ABS) with a period of $W=3-5$ mm. The array was sandwiched between two copper plates separated by a distance $L=10-30$ mm (McMaster-Carr 3350K201) and immersed in mineral oil (Sigma Aldrich CAS No.~8042-47-5). The tracks were aligned perpendicular to the electrode surfaces and to the direction of gravity. Each track contained a single copper sphere (McMaster-Carr No.~64715K16, radius $a=1$ mm), which rolled freely between the two electrodes (Fig.~\ref{fig:1}a). Prior to use, the system was heated in a 60$^\text{o}$C oven for several hours to remove any moisture. The copper electrodes were connected to a amplifier (Trek 20/20C) with an output voltage $V=0-20$ kV.  The particles were illuminated from below by a light emitting diode (LED) and their motions captured by a high-speed camera (Phantom V310).  During each experiment, the electrodes were energized to a specified voltage and the resulting particle motions captured. The voltage was switched off for at least one minute between successive experiments to allow for the dissipation of any space charge accumulated on the surfaces of the tracks and/or the electrodes.  Particle location data were extracted using standard image tracking routines in MATLAB.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Bubble Transport.} 
-Bubbles were generated within the oscillator array by a continuous flow of air supplied by a syringe pump at a rate of 0.2 ml min$^{-1}$. The air was delivered through a tube that connected to a hole in the base of one of the tracks (Fig.~\ref{fig:5}a).  The bubbles (ca.~4 mm in diameter) were transported down the length of the array by the coordinated motions of $N=17$ particles of radius $a=1.5$ mm (Supplementary Movie 6).  In these experiments, the applied voltage was $V=18$ kV, the electrode separation was $L=20$ mm, and the height of the mineral oil above the base of the track was 4 mm.  Bubbles were always transported in the direction of wave propagation, which was controlled by introducing a finite angle between the two electrodes.  Control experiments with no applied voltage showed no bubble motion in either direction.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Electrostatic Interactions.}
-We first consider a single point charge $q$ positioned at a height $z=h$ between two grounded planes at $z=0$ and $z=L$.  The resulting electrostatic potential at point $\ve{x}$ is 
-\begin{equation}
-    \phi(\ve{x}) = \frac{q}{\pi L \varepsilon} \sum_{m=1}^{\infty} \sin\left(\frac{m\pi h}{L}\right)  \sin\left(\frac{m\pi z}{L}\right) K_0\left(\frac{m \pi r}{L}\right),\label{eq:point}
-\end{equation}
-where $r=\sqrt{x^2 + y^2}$ is the radial distance from the charge, and $K_0(~)$ is the zeroth order modified Bessel function of the second kind. For large arguments, the Bessel function decays exponentially as $K_0(s)\rightarrow e^{-s}\sqrt{\pi/2 s} $; the infinite series can be truncated for some $m\gg L/\pi r$ to obtain an accurate approximation.  The corresponding electric field in the $z$-direction is given by $E_z = -\partial \phi / \partial z$. 
-
-\resp{We now consider how the disturbance field $E'$ due to one oscillator $i$ influences the dynamics of another oscillator $j$ in the limit of weak coupling. At zeroth order in $E'$, the phase of each oscillator increases at a constant rate $\omega_{\ro}$ such that $\varphi_i=\omega_{\ro} t$ and $\varphi_j=\omega_{\ro} t+\chi$, where $\chi=\varphi_j-\varphi_i$ is the constant phase difference.  The charge $q=q(\varphi)$ and position $h=h(\varphi)$ of each oscillator depends on the phase as shown in Figure~\ref{fig:4}a. At first order in $E'$, the disturbance in the phase of oscillator $j$ evolves as
-\begin{equation}
-    \frac{d \varphi'_j}{d t} = \frac{\pi n(\varphi_j)}{L\gamma} \left[q(\varphi_j) E'(\varphi_i,\varphi_j) + q'(\varphi_i,\varphi_j) E_{\ro} +\dots\right], \label{eq:j}
-\end{equation}
-where the factor $\pi n(\varphi_j)/L\gamma$ relates the electric force to the corresponding phase velocity with $n(\varphi_j)=\pm 1$ indicating the direction of travel. The bracketed terms describe two types of electrostatic interactions. First, the disturbance field due to particle $i$ drives particle $j$ to move faster or slower between the electrodes. Using the point charge solution (\ref{eq:point}), this disturbance $E'(\varphi_i,\varphi_j)$ is given by
-\begin{equation}
-    E'(\varphi_i,\varphi_j) = -\frac{q(\varphi_i)}{L^2 \varepsilon} \sum_{m=1}^{\infty} m \sin\left(\frac{m\pi h(\varphi_i)}{L}\right)  \cos\left(\frac{m\pi h(\varphi_j)}{L}\right) K_0\left(\frac{m \pi W}{L}\right),
-\end{equation}
-where $W$ is the oscillator spacing. Second, the disturbance field due to particle $i$ alters the charge acquired by particle $j$ on contact with either electrode; the disturbance charge $q'(\varphi_i,\varphi_j)$ is given by 
-\begin{equation}
-    q'(\varphi_i,\varphi_j) = \begin{cases} 
-    +\tfrac{2}{3}\pi^3 \varepsilon a^2  E'(-\chi,0) & 0 \leq \varphi_j < \pi
-    \\
-    -\tfrac{2}{3}\pi^3 \varepsilon a^2 E'(\pi-\chi,\pi) & \pi \leq \varphi_j < 2\pi
-    \end{cases}.
-\end{equation}
-Physically, the charge on particle $j$ is determined by its most recent contact with either electrode ($\varphi_j=0$ or $\pi$); the field due to particle $i$ at the time of that contact determines the disturbance charge.}
-
-\resp{We can now average these two interactions over one oscillation cycle to obtain the phase-averaged interaction function,
-\begin{equation}
-    f(\chi) = \frac{\pi}{L\gamma}\frac{1}{2 \pi}\int_0^{2\pi} n(\varphi_j) \left[ q(\varphi_j) E'(\varphi_j-\chi,\varphi_j) + q'(\varphi_j-\chi,\varphi_j) E_{\ro} \right] d\varphi_j.
-\end{equation}
-Carrying out the integration, each of the two electrostatic interactions produce contributions of the same mathematical form with the second term contributing twice that of the first,
-\begin{equation}
-     f(\chi) = \frac{3\pi q_{\ro}^2}{2  \varepsilon L^3\gamma} \sum_{m=1}^{\infty} m \sin(m \chi)  K_0\left(\frac{m\pi W}{L}\right).
-\end{equation}
-This final expression is plotted in Figure \ref{fig:4}b for the case of $W/L=0.12$. }
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Stationary Solution.} 
-Starting from Eq.~(\ref{eq:phase}), we recast the oscillator dynamics in terms of the phase difference $\chi_n=\varphi_{n+1} - \varphi_n$ and the average phase $\Phi=\tfrac{1}{N}\sum_n\varphi_n$.  Taking the difference in the phase dynamics of successive oscillators, we obtain the following equation for the phase difference 
-\begin{equation}
-    \frac{\partial \chi_n}{\partial t} = \Delta - f(\chi_{n-1}) + 2 f(\chi_n) - f(\chi_{n+1})\quad\text{for }n=2,\dots,N-2, \label{eq:diff}
-\end{equation}
-which makes use of the fact that $f(~)$ is an odd function.  At the open boundaries of the array, the phase difference evolves as
-\begin{equation}
-    \frac{\partial \chi_1}{\partial t} = \Delta + 2f(\chi_1) - f(\chi_2)\quad\text{and}\quad\frac{\partial \chi_{N-1}}{\partial t} = \Delta - f(\chi_{N-2}) + 2f(\chi_{N-1}). \label{eq:diffBC}
-\end{equation}
-In addition to these $N-1$ equations, the dynamics of the $N$ oscillators is described by the that of the average phase, $\partial \Phi /\partial t = \omega_{\ro}$, which is fully decoupled from the phase differences. Setting the time derivatives in Eqs.~(\ref{eq:diff}) and (\ref{eq:diffBC}) equal to zero, the resulting recurrence equation can be solved to obtain the stationary solution, $f(\chi_n) = \tfrac{1}{2}\Delta n(n-N)$, presented in the main text. This solution exists provided that $f_{\max}>\tfrac{1}{8}N^2\lvert\Delta\rvert$ (Supplementary Note 2) and is stable when $f'(\chi_n)<0$ (Supplementary Note 3). The characteristic relaxation time for approaching the stationary state is given by the diffusive-like scaling relation $\tau\sim \chi_{\max}N^2/\pi^2 f_{\max}$.
-
-
