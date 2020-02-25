@@ -1,16 +1,99 @@
-\chapter{Introduction and Background}
-\section{Colloid Robots}
-Here we give the  automation level definitions for colloids robots,   analogy to the Levels of driving
-automation\cite{taeihagh2019governing}
+\chapter{Introduction and Background}\footnotetext{some content in section 1.1 and  section 1.2 of  this  chapter is adapted from Dou, Yong, Kiran Dhatt-Gauthier, and Kyle JM Bishop. "Thermodynamic costs of dynamic function in active soft matter." Current Opinion in Solid State and Materials Science 23.1 (2019): 28-40.See appendix for the full text of this paper}
+Robotics is in the spotlight of coming industry 4.0 era \cite{lasi2014industry}.Highly automatic robots will largely increase the productivity and efficiency in many areas such as manufacturing, transportation and retailing. 
+It is predicted that 47$\%$ percent of jobs will be replaced by robotics in two decades. \cite{frey2013future}
+Research on robotics almost include all part of science and engineering fields from the data science, machine learning to the material science and biology. Lots of current design and development of robotics are inspired from nature to achieve the animal/human-like functions, for example  the famous  bio-inspired robot SPOT\textregistered  by Boston Dynamics \cite{yang2019ten} can perform like dogs  to climbs stairs and run on rough terrain with very impressive ease. Normal robots are usually in the size of meters. However, this dissertation is going to focus on robots with a much smaller size around microns(1$\mu m=10^{-6} m$) called \textbf{colloid robots}. Colloid robots are at the same size of microorganism and living cells,and are designed to mimic similar living functions in a colloidal scale.  
+
+In the first chapter, some basic knowledge of colloid robots are introduced as well as the state of arts research on colloid robots. We gave the  classification for colloid robots based on different automation level(from level 0 to level 6). Chapter 2 showed  an example example developed by us to a achieve level 1 automation with electrostatic actuation. Contact charge electrophoresis(CCEP) uses the repeating electrostatic charging and actuation to drive   
+continuous autonomous motion of anisotropic colloids particles with very high speed and low power input. In Chapter 3, we  design an experiment system that conductive  colloids particles can interact with each other to generate dynamic travelling waves. A modified Kuramoto model treating colloids as phase oscillators is proposed to explain the experiment observation. Chapter 3 provide a pathway to realize level 2 automation for colloid robots. In Chapter 4, a theoretical toy model is introduced to design level 4 automation colloid robots. The colloid robots are interact with the environment and make decisions based on local information by changing their shapes to reach the global navigation behaviors. This toy model provides an design and optimization frames for autonomous navigation in colloid robots. Chapter 5  shows a system in which  magnetic actuated colloid robots can  finish level 4 autonomous navigation. We develop physical mode of     magnetic actuated colloid robots and optimize the design space to navigate the motion of magnetic rollers.  Preliminary experimental results are also discussed in chapter 5. In Chapter 6, future research directions  are proposed  to guide  ultimate realization of  automation level 5 and 6 colloidal robots. 
+
+\section{Bio-inspired Colloids Robots}
+Living cells or microorganism(e.g. bacteria) are the smallest unit of life. Although these smallest units is only in the size of colloid particles(most cells' size are in the range from 1$\mu m$ to 100$\mu m$), living cells can perform all the basic remarkable dynamics functions of life. For example, plan cells capture energy from sunlight and convert it into chemical fuels and structural materials; muscle cells powers organisms to move and to transport matter throughout their interiors; the cytoskeleton incessantly reconfigures its structural components, enabling cells to adapt their mechanical properties to their environment; neural cells uses complex signaling networks to sense environmental inputs and compute intelligent outputs. Perhaps most remarkably, all cells can grow and replicate to escape the unrelenting pull toward thermodynamic equilibrium (i.e., death).  All of these functions ---and the many others not listed---would be highly desirable to achieve in an small artificial robotics system, or called as colloids robots. \textbf{Colloids robots refers to the colloid size units which can perform life-like autonomous behaviors including motion, navigation, sensing, communication or even high level cognition}.  Colloids robots are bio-inspired and trying to mimic living cells, however colloids robots can also designed to have better performance and more complex functions than real living cells. A qualified colloids robots is designed to finish colloid scale tasks with high accuracy and precision at a reasonable energy efficiency.
+\section{Why colloids Robots are different and could be hard to realize}
+Although colloids robots still follow the basic control feedback of normal size robots: sensing, computation and actuation, these components of the control loop are hard to realize with respect to the size limitation and totally different physics in small scale. 
+
+\textbf{Size limitation}. In addition to the three basic components( sensor,actuator and processor) in the feedback loop, a robot also need power supplies, manipulators with joints and a body frame etc. Even for a simple clean robots, there are around 100 parts inside. It is not possible to integrate all of these complex components in a micron size(a micron size particle on a cleaning robot is just like a human standing on the earth) particle if we follow the common way to build a normal size robot. 
+
+\textbf{Physics limitation}. Physics in a small scale and squishy  environment is very different from our normal size world, where everything becomes noisy and sticky. First, in the colloidal scale, Brownian motions largely affect the dynamics of colloidal particles, adding stochastic influence to the robotics. These thermal motions increase the difficulties in controlling colloid robot's accuracy and precision. Second the inertia totally disappear in the small scale as the Reynolds number of the colloid robot's system approach 0.  Reynolds number presents the ration of inertia and viscosity represented as
+\begin{equation}
+    Re=\frac{\rho v l}{\mu}
+\end{equation}
+where $\rho $ is the density of fluid environment, v is the velocity of particle, l is the size of particle. $\mu$ is the  viscosity of fluid. In the colloid scale, both size and speed of particle are much smaller than 1 leading to the Reynolds number approach 0. The absence of inertia means all of the actuation method in normal size robots based on inertia will no longer work. This interesting  motion restriction in low Reynolds number is called Scallop
+theory and was first discussed by Edward Purcel(Professor Prucel was famous for his independent discovery of something else(nuclear magnetic resonance,NMR), which brought him a Nobel prize) \cite{purcell1977life}. As shown in \textcolor{red}{fig XXX},  Scallop Theorem states that a swimmer that exhibits time-symmetric motion cannot achieve net displacement in a low Reynolds number fluid environment because all the motion is time reversal like the open and close of a scallop. New actuation methods must be applied to drive motions for colloid robots.
+
+To solve the above mentioned problems and design colloid robots, researchers got inspired from living. The dynamic functions of living cells require integration of structures and processes to drive material organization in space and time. For example in muscle cell,  the coupling of complex structures(kinesin motor protein) and dissipative processes (ATP hydrolysis) can generates mechanical work. \textcolor{red}{see fig XXX}
+
+Thanks to the development of nano/micro scale fabrication in semiconductor industry, we can now create materials with heterogeneous structure and composition on length scales spanning molecular to macroscopic dimensions with chemical synthesis, lithography, deposition and etching. These technologies can be directly transplanted to the fabrication process of colloidal robots. In addition to structural and material complexity, the artificial dissipation process(or actuation process) for colloid robots  can be generated  with chemical reaction, external field(electric, magnetic, acoustic or fluid flow) to generate motion by by break the time reversal physics. For past decade, lots of research has been conducted to design colloidal robots or study the fundamentals of colloid robots. Colloid robots is now a very hot emerging interdisciplinary field attracting many scientist from math, physics, chemistry, biology and engineering. The states of art of  research approach to colloid is reviewed on\textcolor{red}{section , section }
+
+\section{Automation level of Colloid Robots}
+Before the review of current approach to the colloid robots, 
+we give the  automation level definitions for colloids robots,  analogy to the Levels of driving automation\cite{taeihagh2019governing}. This level definition is proposed to guide the research road-map for colloid robots.
 \begin{itemize}
-    \item Level 0 no automaton:equilibrium  
-    \item Level 1 autonomous  motion: individual can continuous change the energy input into motion without any directional information from energy.
-    \item Level 2 autonomous coordination: group of colloid robots can interact with each other to perform swarm and patterns 
-    \item Level 3  autonomous directed motion(eye on): can guide with the outside computer vision system feedback system 
-    \item Level 4  autonomous navigation (eye off): can guide without the outside 
-    \item Level 5 share the information with each other and communicate  
-    \item Level 6  Fully artificial intelligent with 0 human input after made them（Genesis）
+    \item Level 0 No Automaton: This level of automation means colloid robots cannot do anything autonomous. All the conventional colloid particles (even with complex structures and components) belong to this level. These particles are in the equilibrium state.
+    \item Level 1 Autonomous  Motion: At level 1, individual colloid robots can continuous harness the energy input from the environment into autonomous motion. This is the first entry autonomous level for colloid robots. Although colloid robots at level 1 can move, they can't move with any complex tasks such as navigation and communication.
+    \item Level 2 Autonomous Coordination: Group of colloid robots can interact with each other to perform swarm behaviors and generate patterns. Colloid robots begin to show the sensing function at Level 2 via interacting with each other but still lack the ability to make /reaction based on sensing. 
+    \item Level 3$^{minus}$ Supervised Autonomous Navigation (Eyes on): colloid robots' motion can guide with the outside computer vision feedback system. At Level 3$^{minus}$, the sensor are outside the colloid robot as the observation microscope, camera. The decision maker and respond mechanism are supervised by outside computer vision algorithm. Colloid robots cannot finish navigation task independently in a small scale.
+    \item Level 3$^{plus}$ Unsupervised Autonomous Navigation (Eyes off): Colloid robots can finish the sensing-computation-actuation feedback loop independently without the outside devices to supervise. Autonomous navigation in Level 3 $^{plus}$ satisfied the basic autonomous requirement compared to a normal robot. Autonomous level higher than level 3 will enter the area of artificial intelligent.
+    \item Level 4 Autonomous Communication: At the level 4 automation, colloid robot can not only sense the information from their local environment, but can also communicate with other colloid robots sharing information to make decision together. Autonomous communication will significantly increase the efficiency of colloid robot's job such as searching and repairing.
+    \item Level 5 Colloid Artificial Intelligent: This level colloid robots need \textbf{0 human input} to finish the desirable tasks after created. Level 5 colloid particles are also likely to show some high level-like functions such as 
+    growing, learning, cognitive abilities  even reproduce.
 \end{itemize}
-\section{Experiment }
-\section{Theory and simulation}
-\section{Potential Application }
+One thing need to mention here is that the technologies development stages are not linear but exponential instead. Higher level automation of colloid robots  represent much more research efforts and could take longer to reach higher autonomous level states.
+
+\begin{table}[h!]
+     \begin{center}
+     \begin{tabular}{ c  p{5cm}  p{5cm}  }
+     \toprule
+      my.Lboro & Advantages & Disadvantages \\ 
+    \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(l){3-3}
+     \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=60mm]{images/myLboro.png}}
+      & 
+      \begin{itemize}[topsep=0pt]
+      \item Accessibility
+      \item Up to date information
+      \item Fulfil students needs and wants \ldots
+      \end{itemize}
+      & 
+      \begin{itemize}[topsep=0pt]
+      \item Accessibility
+      \item Up to date information
+      \item Fulfil students needs and wants \ldots
+      \end{itemize}
+      \\ \bottomrule
+      \end{tabular}
+      \caption{Autonomous Level of colloid robots}
+      \label{tbl:myLboro}
+      \end{center}
+      \end{table}
+
+
+
+\section{A state of art review on colloid robots }
+\subsection{Experiment Approach}
+Most of experiment approach is confined in level 1 automation. While some of the 
+
+ system.\cite{nikolov2016computational} Chemical reaction and external fields are both used to powering the motion of active matters.Asymmetric Chemical Reactions happen on isotropic particles generate chemical's gradient or bubbles to drive the motion of active mater \cite{shklyaev2016harnessing,zhang2018tailoring,parmar2018micro}. Besides chemical reactions, electric field, magnetic field and acoustic field are commonly used  to drive active matter, which has less fluctuation trajectories comprared to chemical reaction method \cite{han2018engineering,ren2018two}. Similar to molecular motors,Active matter system also have a very low efficiency of energy utilization with mass amount of heat dissipation.\cite{wang2013understanding} Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light} Collective behaviors are usually existed in active matter system like birds' swarm and fish's flock \cite{wang2015one}. The active matters shows emergent patterns such as dynamic clustering and phase separation.\cite{ginot2018aggregation} Some of these emergent pattern showing self-assembly behaviors will be discussed in detail in the next section 
+ 
+   and represents significant progress from the molecular switches that As recent as 2016Nevertheless, the recent realization of small machines is no small achievement and represents significant progress from the molecular switches that .
+%Active matters are usually cell size colloid particles harnessing energy from environment to perform directed motions in low Reynold number system.\cite{nikolov2016computational} Chemical reaction and external fields are both used to powering the motion of active matters.Asymmetric Chemical Reactions happen on isotropic particles generate chemical's gradient or bubbles to drive the motion of active mater \cite{shklyaev2016harnessing,zhang2018tailoring,parmar2018micro}. Besides chemical reactions, electric field, magnetic field and acoustic field are commonly used  to drive active matter, which has less fluctuation trajectories comprared to chemical reaction method \cite{han2018engineering,ren2018two}. Similar to molecular motors,Active matter system also have a very low efficiency of energy utilization with mass amount of heat dissipation.\cite{wang2013understanding} Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light} Collective behaviors are usually existed in active matter system like birds' swarm and fish's flock \cite{wang2015one}. The active matters shows emergent patterns such as dynamic clustering and phase separation.\cite{ginot2018aggregation} Some of these emergent pattern showing self-assembly behaviors will be discussed in detail in the next section 
+
+
+
+%\cite{palacci2013living} Chaikin group found that light induced self-propeled particle to aggregate into a dynamic steady state with continuous creation and self-destruction.The he phoretic attraction between the particles and steric effects among large clusters is the reason for the dynamics asssembly.
+his  move towards one another and then   may move   For example, two spherical  In their simplest form , At equilibrium, the interaction between two colloidal particles ($A$ and $B$) obeys action-reaction symmetry: the force on $A$ is equal and opposite to the force on $B$.  If, however, one of the particles is catalytic, it can create concentration gradients in the presence of chemical fuel that drive interfacial phoretic flows.  Remarkably 
+
+%catalyzes the decomposition of chemical fuel, it will create local concentration gradients  creates local gradients in the concentration of chemical fuel presence of chemical fuel, which 
+
+
+\textbf{fabrication}
+\textbf{actuation}
+\textbf{communication}
+\textbf{navigation}
+
+\subsection{Theory and simulation}
+``What I cannot create, I do not understand.'' If we seek to understand the inner workings of living matter, we should strive to create synthetic analogs---perhaps greatly simplified---that perform similar dynamic functions.
+\textbf{physics law of nonequilibrium }
+\textbf{hydrodynamics}
+\textbf{multi physics field solution }
+\textbf{optimization}
+
+\textbf{Potential Application }
