@@ -23,77 +23,150 @@ theory and was first discussed by Edward Purcel(Professor Prucel was famous for 
 To solve the above mentioned problems and design colloid robots, researchers got inspired from living. The dynamic functions of living cells require integration of structures and processes to drive material organization in space and time. For example in muscle cell,  the coupling of complex structures(kinesin motor protein) and dissipative processes (ATP hydrolysis) can generates mechanical work. \textcolor{red}{see fig XXX}
 
 Thanks to the development of nano/micro scale fabrication in semiconductor industry, we can now create materials with heterogeneous structure and composition on length scales spanning molecular to macroscopic dimensions with chemical synthesis, lithography, deposition and etching. These technologies can be directly transplanted to the fabrication process of colloidal robots. In addition to structural and material complexity, the artificial dissipation process(or actuation process) for colloid robots  can be generated  with chemical reaction, external field(electric, magnetic, acoustic or fluid flow) to generate motion by by break the time reversal physics. For past decade, lots of research has been conducted to design colloidal robots or study the fundamentals of colloid robots. Colloid robots is now a very hot emerging interdisciplinary field attracting many scientist from math, physics, chemistry, biology and engineering. The states of art of  research approach to colloid is reviewed on\textcolor{red}{section , section }
+\section{The importance of  sensing in colloid robots}
+modular, self awareness, make difference between force and 
+
+reprogrammable 
+ programmed motions
+  AI we call such things reflex agents. 
+  
+  \textbf{repurposable}
+  
+  Industrial robot as defined by ISO 8373:
+
+An automatically controlled, reprogrammable, multipurpose manipulator programmable in three or more axes, which may be either fixed in place or mobile for use in industrial automation applications.
+
+Reprogrammable: whose programmed motions or auxiliary functions may be changed without physical alterations;
+
+Multipurpose: capable of being adapted to a different application with physical alterations;
+
+Physical alterations: alteration of the mechanical structure or control system except for changes of programming cassettes, ROMs, etc.
+
+Axis: direction used to specify the robot motion in a linear or rotary mode
+
+For example, let's think about a welding operation that takes place in a car factory. This operation could be done with a custom machine that lowers welding elements into place at the appropriate place on the car. Or we could install a robot arm, put a welder on the end of the arm, and teach (program) it where to weld. When a new model of car comes along, we can teach it the new weld points. If we no longer need the welding operation, we can move the robot somewhere else, put a new tool on the end of the arm, and teach it to paint or to screw in a bolt.
+
+ If you can't easily re-purpose your machine to do something completely different by reprogramming (and perh
+ 
+ Animal -> Robot
+Plant -> Machine
 
 \section{Automation level of Colloid Robots}
 Before the review of current approach to the colloid robots, 
 we give the  automation level definitions for colloids robots,  analogy to the Levels of driving automation\cite{taeihagh2019governing}. This level definition is proposed to guide the research road-map for colloid robots.
 \begin{itemize}
     \item Level 0 No Automaton: This level of automation means colloid robots cannot do anything autonomous. All the conventional colloid particles (even with complex structures and components) belong to this level. These particles are in the equilibrium state.
-    \item Level 1 Autonomous  Motion: At level 1, individual colloid robots can continuous harness the energy input from the environment into autonomous motion. This is the first entry autonomous level for colloid robots. Although colloid robots at level 1 can move, they can't move with any complex tasks such as navigation and communication.
-    \item Level 2 Autonomous Coordination: Group of colloid robots can interact with each other to perform swarm behaviors and generate patterns. Colloid robots begin to show the sensing function at Level 2 via interacting with each other but still lack the ability to make /reaction based on sensing. 
-    \item Level 3$^{minus}$ Supervised Autonomous Navigation (Eyes on): colloid robots' motion can guide with the outside computer vision feedback system. At Level 3$^{minus}$, the sensor are outside the colloid robot as the observation microscope, camera. The decision maker and respond mechanism are supervised by outside computer vision algorithm. Colloid robots cannot finish navigation task independently in a small scale.
-    \item Level 3$^{plus}$ Unsupervised Autonomous Navigation (Eyes off): Colloid robots can finish the sensing-computation-actuation feedback loop independently without the outside devices to supervise. Autonomous navigation in Level 3 $^{plus}$ satisfied the basic autonomous requirement compared to a normal robot. Autonomous level higher than level 3 will enter the area of artificial intelligent.
-    \item Level 4 Autonomous Communication: At the level 4 automation, colloid robot can not only sense the information from their local environment, but can also communicate with other colloid robots sharing information to make decision together. Autonomous communication will significantly increase the efficiency of colloid robot's job such as searching and repairing.
-    \item Level 5 Colloid Artificial Intelligent: This level colloid robots need \textbf{0 human input} to finish the desirable tasks after created. Level 5 colloid particles are also likely to show some high level-like functions such as 
+    \item Level 1 Autonomous  Motion: At level 1, individual colloid robot can continuous harness the energy from the environment to power autonomous motion. This is the entry autonomous level for colloid robots. Although colloid robots at level 1 can move, they can't move with any complex tasks such as navigation and communication.
+    \item Level 2 Autonomous Coordination: Group of colloid robots can interact with each other to perform swarm behaviors and generate patterns. Colloid robots begin to show the sensing function at Level 2 via interacting with each other. But this kind is sensing is passive  and still lack the ability to make initiative decision/reaction based on sensing. 
+    \item Level 3$^{-}$ Supervised Autonomous Navigation (Eyes on): colloid robots' motion can be guided with the outside computer vision feedback system. At Level 3$^{minus}$, the sensor are outside the colloid robot as the observation microscope, camera. The decision makers and respond mechanism are supervised by outside computer vision algorithm. Colloid robots cannot finish navigation task independently in a small scale.
+    \item Level 3$^{+}$ Unsupervised Autonomous Navigation (Eyes off): Colloid robots can finish the sensing-computation-actuation feedback loop independently without the outside devices to supervise. Autonomous navigation in Level 3 $^{+}$ satisfied the basic autonomous requirement for a normal robot. Autonomous level higher than level 3 will enter the area of artificial intelligent.
+    \item Level 4 Autonomous Communication: At the level 4 automation, colloid robot can not only sense the information from their local environment, but can also communicate with other colloid robots, sharing&transporting information to make decision together. Autonomous communication will significantly increase the efficiency of colloid robots' job such as searching and repairing.
+    \item Level 5 Colloid Artificial Intelligent: This level colloid robots need \textbf{0 human input} to finish any desirable tasks after created. Level 5 colloid particles are also likely to show some high level-like functions such as 
     growing, learning, cognitive abilities  even reproduce.
 \end{itemize}
 One thing need to mention here is that the technologies development stages are not linear but exponential instead. Higher level automation of colloid robots  represent much more research efforts and could take longer to reach higher autonomous level states.
 
 \begin{table}[h!]
-     \begin{center}
-     \begin{tabular}{ c  p{5cm}  p{5cm}  }
-     \toprule
-      my.Lboro & Advantages & Disadvantages \\ 
-    \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(l){3-3}
-     \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=60mm]{images/myLboro.png}}
-      & 
-      \begin{itemize}[topsep=0pt]
-      \item Accessibility
-      \item Up to date information
-      \item Fulfil students needs and wants \ldots
-      \end{itemize}
-      & 
-      \begin{itemize}[topsep=0pt]
-      \item Accessibility
-      \item Up to date information
-      \item Fulfil students needs and wants \ldots
-      \end{itemize}
-      \\ \bottomrule
-      \end{tabular}
-      \caption{Autonomous Level of colloid robots}
-      \label{tbl:myLboro}
-      \end{center}
-      \end{table}
+  \centering
+  \begin{tabular}{ | m{6cm} | m{6cm} | }
+    \hline
+    Automation Level & Illustration \\ \hline
+    %\begin{minipage}[t]{5cm}
+     0.No Automaton
+    %\end{minipage}
+      &
+      \begin{minipage}{.35\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\  \hline
+    %\begin{minipage}[t]{5cm}
+      1. Autonomous Motion
+    %\end{minipage}
+  
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\  \hline
+    %\begin{minipage}[t]{5cm}
+      2.Autonomous Coordination
+    
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\  \hline
+    %\begin{minipage}[t]{5cm}
+      3$^{minus}$. Supervised  Autonomous  Navigation  
+    
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\  \hline
+    %\begin{minipage}[t]{5cm}
+      3$^{plus}$. Unsupervised Autonomous Navigation 
+   
+      
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\ \hline
+    %\begin{minipage}[t]{5cm}
+      4. Autonomous Communication
+    
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\ \hline
+    %\begin{minipage}[t]{5cm}
+      5. Colloid Artificial Intelligent: 
+  
+      &
+      \begin{minipage}{.15\textwidth}
+      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+    \end{minipage}
+    %\end{minipage}
+    \\ \hline
+    
+    
+    
+  \end{tabular}
+  \caption{Automation level of colloid robot}\label{tbl:myLboro}
+\end{table}
 
 
 
 \section{A state of art review on colloid robots }
+It is not clear which paper first mentioned  similar idea of colloid scale robotics(the basic concept of  small scale machines can be tracked to Richard Feynman's famous paper,\textit{There's plenty of room at the bottom}\cite{feynman1960there}). The current research wave in the past decade on colloid robot is triggered by the discovery of self propulsion active colloid particle in chemical fuels \cite{paxton2004catalytic}. In 2004, scientist from Penn State University found chemical fuel(they use hydrogen peroxide, $H_2O_2$ in the first paper) can drive  gold-platinum bimetallic nanorods' autonomous motion. The asymmetric different chemical reactions , which happen at different end of nanorod,  lead to a net flow fluid near the surface of nanorod. This pioneer research then attracted lots of attention in different research field beyond chemistry such as soft condensed matter physics\cite{Marchetti2013}, materials science\cite{han2018engineering}, applied math\cite{fodor2016far} and engineering research\cite{sitti2015biomedical}. More than tens of thousands papers related to the autonomous behaviors of colloids have been published since then. However, most of these research papers either experiment or theory only realize the first 2 level automation(autonomous motion and coordination) in colloid robots. Only a few of them realize the supervise/unsupervised autonomous navigation function. From our knowledge, the higher level's automation is still challenging, and should be the main research direction in the future. In the following content, we are going to give a short state-of-art of art review on both experiment approach to colloid robots as well as new theories and simulation methods towards colloid robots. In this short review, I have no intention and interests to rephrase and cover all the research papers on colloid robots like an encyclopedia book. Instead,  I will focus on the main physics, chemistry and engineering ideas behind these papers. 
 \subsection{Experiment Approach}
-Most of experiment approach is confined in level 1 automation. While some of the 
+\textbf{Fabrication}  High throughput nano/micro scale fabrication technologies in semiconductor manufacturing industry now can make 3-D structure even smaller than 5$nm$.\cite{mokhlesi2010three} These fancy technologies to make CPU and memory can be transplanted directly to make colloid robots of almost any desired size, shape and component in clean room.\cite{koman2018colloidal} A typical fabrication process mainly including lithography to make patterns as sacrificing models, etching to remove unnecessary materials and deposition to introduce new materials. Multi-layer processing can be designed and optimized to make high dimension and complex structure such as spiral shape\cite{zhang2009artificial}. After the colloid robots are fabricated on the wafer, they can be harvested from the silica surface with etching technology or simply physical removal. For the detailed process of fabrication, I would like to refer readers to these 3 comprehensive reviews\cite{wong2016synthetic,wang2017emerging, zha2018tubular}. Chemists and material scientists also contributed creative chemical synthesis methods to make colloid scale complex structure with one-pot high-throughput\cite{youssef2016shape,gong2017patchy,wang2019active}. One challenge for colloid robot's fabrication is to   make  colloid scale soft(or shape changing) structure with complex component component. liquid crystal, hydrogel gel, droplet and silica polymer with self assembly property are promising candidate materials for micro/nano scale soft structure. \cite{leong2009tetherless,denkov2015self,zhang2017printing,wei2019molecular}. Another fabrication challenge is to make bio-hybrid colloid robots,where experimental biologist can provide invaluable experience and knowledge.\cite{stanton2016biohybrid,magdanz2013development}
 
- system.\cite{nikolov2016computational} Chemical reaction and external fields are both used to powering the motion of active matters.Asymmetric Chemical Reactions happen on isotropic particles generate chemical's gradient or bubbles to drive the motion of active mater \cite{shklyaev2016harnessing,zhang2018tailoring,parmar2018micro}. Besides chemical reactions, electric field, magnetic field and acoustic field are commonly used  to drive active matter, which has less fluctuation trajectories comprared to chemical reaction method \cite{han2018engineering,ren2018two}. Similar to molecular motors,Active matter system also have a very low efficiency of energy utilization with mass amount of heat dissipation.\cite{wang2013understanding} Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light} Collective behaviors are usually existed in active matter system like birds' swarm and fish's flock \cite{wang2015one}. The active matters shows emergent patterns such as dynamic clustering and phase separation.\cite{ginot2018aggregation} Some of these emergent pattern showing self-assembly behaviors will be discussed in detail in the next section 
- 
-   and represents significant progress from the molecular switches that As recent as 2016Nevertheless, the recent realization of small machines is no small achievement and represents significant progress from the molecular switches that .
-%Active matters are usually cell size colloid particles harnessing energy from environment to perform directed motions in low Reynold number system.\cite{nikolov2016computational} Chemical reaction and external fields are both used to powering the motion of active matters.Asymmetric Chemical Reactions happen on isotropic particles generate chemical's gradient or bubbles to drive the motion of active mater \cite{shklyaev2016harnessing,zhang2018tailoring,parmar2018micro}. Besides chemical reactions, electric field, magnetic field and acoustic field are commonly used  to drive active matter, which has less fluctuation trajectories comprared to chemical reaction method \cite{han2018engineering,ren2018two}. Similar to molecular motors,Active matter system also have a very low efficiency of energy utilization with mass amount of heat dissipation.\cite{wang2013understanding} Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light} Collective behaviors are usually existed in active matter system like birds' swarm and fish's flock \cite{wang2015one}. The active matters shows emergent patterns such as dynamic clustering and phase separation.\cite{ginot2018aggregation} Some of these emergent pattern showing self-assembly behaviors will be discussed in detail in the next section 
+\textbf{Actuation} Autonomous motion is the most fundamental characteristic of colloid robots, making colloid robots real machines instead of simple colloid particles. Colloid robots can harness energy from environment and convert energy 
 
 
+Chemical reaction and external fields are both used to powering the motion of active matters.Asymmetric Chemical Reactions happen on isotropic particles generate chemical's gradient or bubbles to drive the motion of active mater \cite{shklyaev2016harnessing,parmar2018micro}. Besides chemical reactions, electric field, magnetic field and acoustic field are commonly used  to drive active matter, which has less fluctuation trajectories comprared to chemical reaction method \cite{han2018engineering,ren2018two}. active matter system also have a very low efficiency of energy utilization with mass amount of heat dissipation.\cite{wang2013understanding} Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light} Collective behaviors are usually existed in active matter system like birds' swarm and fish's flock \cite{wang2015one}. The active matters shows emergent patterns such as dynamic clustering and phase separation.\cite{ginot2018aggregation} 
 
-%\cite{palacci2013living} Chaikin group found that light induced self-propeled particle to aggregate into a dynamic steady state with continuous creation and self-destruction.The he phoretic attraction between the particles and steric effects among large clusters is the reason for the dynamics asssembly.
-his  move towards one another and then   may move   For example, two spherical  In their simplest form , At equilibrium, the interaction between two colloidal particles ($A$ and $B$) obeys action-reaction symmetry: the force on $A$ is equal and opposite to the force on $B$.  If, however, one of the particles is catalytic, it can create concentration gradients in the presence of chemical fuel that drive interfacial phoretic flows.  Remarkably 
+\textbf{Coordination}
 
-%catalyzes the decomposition of chemical fuel, it will create local concentration gradients  creates local gradients in the concentration of chemical fuel presence of chemical fuel, which 
-
-
-\textbf{fabrication}
-\textbf{actuation}
-\textbf{communication}
-\textbf{navigation}
+\textbf{Navigation}
 
 \subsection{Theory and simulation}
-``What I cannot create, I do not understand.'' If we seek to understand the inner workings of living matter, we should strive to create synthetic analogs---perhaps greatly simplified---that perform similar dynamic functions.
+Richard Feynman said "What I cannot create, I do not understand." to emphasise the importance of fundamental understanding of science.This is also true for the  research in colloid robots  
 \textbf{physics law of nonequilibrium }
+
 \textbf{hydrodynamics}
+
 \textbf{multi physics field solution }
+
 \textbf{optimization}
 
-\textbf{Potential Application }
+%\textbf{Potential Application }
