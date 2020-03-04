@@ -23,35 +23,19 @@ theory and was first discussed by Edward Purcel(Professor Prucel was famous for 
 To solve the above mentioned problems and design colloid robots, researchers got inspired from living. The dynamic functions of living cells require integration of structures and processes to drive material organization in space and time. For example in muscle cell,  the coupling of complex structures(kinesin motor protein) and dissipative processes (ATP hydrolysis) can generates mechanical work. \textcolor{red}{see fig XXX}
 
 Thanks to the development of nano/micro scale fabrication in semiconductor industry, we can now create materials with heterogeneous structure and composition on length scales spanning molecular to macroscopic dimensions with chemical synthesis, lithography, deposition and etching. These technologies can be directly transplanted to the fabrication process of colloidal robots. In addition to structural and material complexity, the artificial dissipation process(or actuation process) for colloid robots  can be generated  with chemical reaction, external field(electric, magnetic, acoustic or fluid flow) to generate motion by by break the time reversal physics. For past decade, lots of research has been conducted to design colloidal robots or study the fundamentals of colloid robots. Colloid robots is now a very hot emerging interdisciplinary field attracting many scientist from math, physics, chemistry, biology and engineering. The states of art of  research approach to colloid is reviewed on\textcolor{red}{section , section }
-\section{The importance of  sensing in colloid robots}
-modular, self awareness, make difference between force and 
+\section{Difference between a colloid machine and a colloid robots}
+ Some research proposed the idea of colloid machine which can also harness energy from environment to perform dynamics motions such as motions and assembly.\cite{spellings2015shape,van2016spatiotemporal} 
+ So before we introduce more about colloid robots, we would like make clear explanation for the definition of  colloid robots and why colloid robot is unique. Generally,although showing some level of autonomous, a machines is only a part or an very early stage  of a fully intelligent robot.\cite{whitesides2018soft} We can borrow the standard in industry robot's ISO definition.\cite{virk2008iso}
+A colloid robot must be capable of \textbf{programmable} for \textbf{multipurpose} task and controlled automatically in a colloid scale.  The key difference between machine and robots are re-programmable and re-purposable:
+\begin{itemize}
+    \item Re-programmable: Colloid robots' motion and interactions could be changed without core physical or chemical renovation via sensing feedback loop.
+    \item Re-purposable: Colloid robots' could be used in various environment for different tasks  such as different directions' navigation via re-programming.
+    \item Physical  and chemical renovation:  rebuilt the colloid robots with different principles such as different chemical reactions or different physical interaction.
+\end{itemize}
+If you can't easily re-purpose colloid machine to do something completely different by reprogramming (making minimal hardware "tool" changes) easily as well, the colloid machine is not a really colloid robots.
+For example, a hammer is a machine that you can put it in the assembly line to drive a small nails.   Or we could add a computer vision system to hammer coupled with hammers' actuator. Now the hammer is a robotics hammer. The hammer can adapt the drive force based on different size of nails--smaller nail with small force, larger hammer with large force. As a robotics hammer, it can also be reprogrammed without much efforts to the opposite rule--smaller nail with large force, larger hammer with small force. When not used to drive nails, this hammer can also be applied to other jobs such as breaking parts.
 
-reprogrammable 
- programmed motions
-  AI we call such things reflex agents. 
-  
-  \textbf{repurposable}
-  
-  Industrial robot as defined by ISO 8373:
 
-An automatically controlled, reprogrammable, multipurpose manipulator programmable in three or more axes, which may be either fixed in place or mobile for use in industrial automation applications.
-
-Reprogrammable: whose programmed motions or auxiliary functions may be changed without physical alterations;
-
-Multipurpose: capable of being adapted to a different application with physical alterations;
-
-Physical alterations: alteration of the mechanical structure or control system except for changes of programming cassettes, ROMs, etc.
-
-Axis: direction used to specify the robot motion in a linear or rotary mode
-
-For example, let's think about a welding operation that takes place in a car factory. This operation could be done with a custom machine that lowers welding elements into place at the appropriate place on the car. Or we could install a robot arm, put a welder on the end of the arm, and teach (program) it where to weld. When a new model of car comes along, we can teach it the new weld points. If we no longer need the welding operation, we can move the robot somewhere else, put a new tool on the end of the arm, and teach it to paint or to screw in a bolt.
-
- If you can't easily re-purpose your machine to do something completely different by reprogramming (and perh
- 
- Animal -> Robot
-Plant -> Machine
-
-Some research have shown some active matter can do self-regulate motion by adapting its shape with the environment conduction such as temperature and light intensity.\cite{tu2017self,li2018light}. These example is not real sensing
 \section{Automation level of Colloid Robots}
 Before the review of current approach to the colloid robots, 
 we give the  automation level definitions for colloids robots,  analogy to the Levels of driving automation\cite{taeihagh2019governing}. This level definition is proposed to guide the research road-map for colloid robots.
@@ -76,7 +60,7 @@ One thing need to mention here is that the technologies development stages are n
      0.No Automaton
     %\end{minipage}
       &
-      \begin{minipage}{.35\textwidth}
+      \begin{minipage}{.3\textwidth}
       \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
@@ -86,8 +70,8 @@ One thing need to mention here is that the technologies development stages are n
     %\end{minipage}
   
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\  \hline
@@ -95,8 +79,8 @@ One thing need to mention here is that the technologies development stages are n
       2.Autonomous Coordination
     
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\  \hline
@@ -104,8 +88,8 @@ One thing need to mention here is that the technologies development stages are n
       3$^{minus}$. Supervised  Autonomous  Navigation  
     
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\  \hline
@@ -114,8 +98,8 @@ One thing need to mention here is that the technologies development stages are n
    
       
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\ \hline
@@ -123,8 +107,8 @@ One thing need to mention here is that the technologies development stages are n
       4. Autonomous Communication
     
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\ \hline
@@ -132,8 +116,8 @@ One thing need to mention here is that the technologies development stages are n
       5. Colloid Artificial Intelligent: 
   
       &
-      \begin{minipage}{.15\textwidth}
-      \includegraphics[width=\linewidth]{figures/5_1.pdf}
+      \begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth]{figures/table1_1.pdf}
     \end{minipage}
     %\end{minipage}
     \\ \hline
@@ -200,7 +184,7 @@ where D is the diffusion coefficient of reactant, this is the Laplace equation f
 \end{equation}
 where $r$ is the distance from the center of colloid, $r_s$ is the radius of colloid, \texbf{n} is the normal vector on the surface of colloid and $\alpha(r_s)$ is the flux rate. The chemical reaction will lead to a net normal flux(denoted as $\alpha(r_s)$ ) on the surface of colloid. The fluid will response to the local gradient change near the colloids and generate a slip velocity as,
 \begin{equation}
-    v_s=\mu(r_s)(\textbf{I}-\textbf{n})\cdot \nabla C(r_s)
+    v_s=\mu(r_s)(\textbf{I}-\textbf{n}\textbf{n})\cdot \nabla C(r_s)
 \end{equation}
 $\mu$ is called mobility measuring the response rate of fluid to concentration gradient. By making $\alpha$ and $\mu$ positive or negative, the asymmetric chemical activity on the surface can lead to autonomous motion.  Also both repulsion and attraction force between colloids can be achieved to study collective behaviors of this system. \cite{michelin2015autophoretic}
 
@@ -218,7 +202,7 @@ Where $f_e$  is the component of actuated force and $x_c$ is the center of collo
 \begin{equation}
     \eta \nabla^2\textbf{u}-\nabla p=0,\quad \nabla \cdot u=0
 \end{equation}
-where $eta$ is the viscosity, p is the pressure from fluid. Although hydrodynamic problems are the most complex one in modelling colloid robot because of non-linear terms, it is the most interesting modelling research part with nontrivial results and patterns. \cite{Lauga2009,berke2008hydrodynamic,lauga2011life} In the low Reynolds number regime, the hydrodynamic force will balance the external force generated by actuation mechanism. Stokesian dynamics are used to calculate the transnational and angular velocity of colloid robots \cite{Brady1988a,Kim2005}
+where $\eta$ is the viscosity, p is the pressure from fluid. Although hydrodynamic problems are the most complex one in modelling colloid robot because of non-linear terms, it is the most interesting modelling research part with nontrivial results and patterns. \cite{Lauga2009,berke2008hydrodynamic,lauga2011life} In the low Reynolds number regime, the hydrodynamic force will balance the external force generated by actuation mechanism. Stokesian dynamics are used to calculate the transnational and angular velocity of colloid robots \cite{Brady1988a,Kim2005}
 \begin{equation}
     \left[ \begin{array}{c} F \\ T \end{array} \right] = \begin{bmatrix} A & B \\ B^T & C \end{bmatrix} \left[ \begin{array}{c} v \\ \omega \end{array} \right]
 \end{equation}
@@ -226,11 +210,9 @@ where \textbf{A}, \textbf{B}, and \textbf{C} are tensors determined only by the 
 \begin{equation}
     F_{drag}=6 \pi \eta a((1+\frac{a^2}{6}\nabla^2)v_{\infty}(0)-U)
 \end{equation}
-Where $F$ is the   force exerted by the fluid on colloid, $a$ is the size of colloid, $u$ is the  the transnational  velocity of the colloid and $v$ is the is the disturbance velocity caused by present of other colloids in fluid environment.We would rather to directed audience to James Swan's paper for the full expression of hydrodynamic interaction in the form of Stokesian dynamics. \cite{swan2011modeling}
+Where $F$ is the   force exerted by the fluid on colloid, $a$ is the size of colloid, $u$ is the  the transnational  velocity of the colloid and $v$ is the is the disturbance velocity caused by present of other colloids in fluid environment.We would rather to directed audience to James Swan's paper for the full expression of hydrodynamic interaction in the form of Stokesian dynamics. \cite{swan2011modeling} Basically, the simulation of colloid robots' dynamics are solving partial differential equations either numerically or analytically with the physical model showed above.In addition to some commercial multiphysics simulation software such as COMSOL\textregistered, there are actually some open access library with different coding language  can help simulating the dynamics of colloid robots. \cite{glaser2015strong,anderson2008general,swan2011modeling,singh2019hydrodynamic}
 
-
-\textbf{Simulation}
-Computation package \textbf{Design and Optimization}
+\textbf{Design and Optimization} For the engineer purpose, colloid robots should be designed with desired functions. \cite{liebchen2019optimal} As shown in \textcolor{red}{figure}The design process should start with constructing and understanding the design parameters space. For example how many physics variable(e.g size, temperature, fluid viscosity) should be added into our design space. And then we  need to reduce the dimension of the design space based on physics and mathematics to make then design problems easier. Dimension reduction is a very essential part for the colloid robot's design problem. A good dimension reduction will significantly reduce the time on searching for the optimized result. Then we build a physical model to link these design parameters and our target functions of colloid robots together. This physical model should be adequate enough  to capture call the key physics affecting the dynamics of colloid robots. At the same time this model should be concise enough to eliminate unnecessary computation work. The final step is to optimization algorithm to find the proper design space for colloid robots.\cite{ward1963hierarchical,nocedal2006numerical} Recent research also shows that machine learning tech can assist to design colloid robots with impressive efficiency .\cite{yang2020micro,yang2020cargo,yang2019deep,tsang2018self}
 
 
 
