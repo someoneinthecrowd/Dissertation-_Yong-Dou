@@ -51,7 +51,7 @@ For the period, the standard deviation ranged from $2.0~\mu\text{s}$ ($8\%$ of t
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{VariationPlots}
+    \includegraphics[width=\textwidth]{figures/A1_VariationPlots.png}
     \caption{(left) Lateral displacement $\Delta$ vs.~oscillation period $T$ for four particles showing 50 oscillation cycles. (right) Average displacement vs.~average period for 10 particles; error bars denote one standard devation above/below the mean. Here, the applied voltage is $V=800~\text{V}$ and the electrode separation is $H=200~\mu\text{m}$.}
     \label{fig:Variations}
 \end{figure}
@@ -151,7 +151,7 @@ where $g_0^{\infty}(\alpha)$ and $g_1^{\infty}(\alpha)$ are dimensionless functi
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=5cm]{Unbounded}
+    \includegraphics[height=5cm]{figures/A1_Unbounded.pdf}
     \caption{(\emph{left}) Schematic illustration of a Janus particle in a uniform electric field $\ve{E}^{\infty}$.  (\emph{right}) Dimensionless functions $g_0^{\infty}(\alpha)$ and $g_1^{\infty}(\alpha)$ used in equation (\ref{eq:torqueInf}) to compute the electric torque $L$ on a Janus sphere in an unbounded medium. The markers are computed using COMSOL; the solid curves are least squares fits of the form $g_0^{\infty}(\alpha)=A\sin(2\alpha)$ and $g_1^{\infty}(\alpha)=B \sin(\alpha)$ (with $A=2.27$ and $B=-4.24$).}
     \label{fig:TorqueFunctions}
 \end{figure}
@@ -178,7 +178,7 @@ For a fixed surface separation $\delta$, the charge acquired on contact depends 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=5.5cm]{ContactCharge}
+    \includegraphics[height=5.5cm]{figures/A1_ContactCharge.pdf}
     \caption{(\emph{left}) Schematic illustration of a Janus particle in electrical contact with a planar electrode. (\emph{right}) Charge acquired by the particle (scaled by $4\pi \varepsilon a^2 E^{\infty}$) as a function of its orientation.  Here, the surface separation is $\delta= 0.02 a$ (similar results are obtained for other $\delta$ provide $\delta\ll a$). The plot markers are computed using COMSOL; the solid curve is a least squares fit of the form $y=A + B \cos x$ (with $A=1.30$ and $B=0.266$).}
     \label{fig:ContactCharge}
 \end{figure}
@@ -209,7 +209,7 @@ Knowledge of the force and torque is necessary to describe the translational and
 
 \begin{figure}
     \centering
-    \includegraphics[width=15cm]{ForceTorque}
+    \includegraphics[width=15cm]{figures/A1_ForceTorque.png}
     \caption{Dimensionless functions $f_i(\alpha,\xi)$ and $g_i(\alpha,\xi)$ used in equations (\ref{eq:Force}) and (\ref{eq:Torque}) to evaluate the force and torque on a charged Janus particle near a grounded plane. The parameter $\alpha$ describes the orientation of the particle; $\xi=(zp-a)/a$ describes its separation from the surface. The markers are computed numerically using COMSOL; the surfaces are least squares interpolants given by equations (\ref{eq:ForceInterpolant}) and (\ref{eq:TorqueInterpolant}).}
     \label{fig:ForceTorque}
 \end{figure}
@@ -247,7 +247,7 @@ where $\delta_{ij}$ is the Kronecker delta, and $\varepsilon_{ijk}$ is the permu
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=7cm]{resistance}
+    \includegraphics[width=7cm]{figures/A1_resistance.pdf}
     \caption{Resistance coefficients for a sphere of radius $a$ as a function of the surface separation $\xi=(z_p-a)/a$ with plane surface at $z=0$. The dashed lines denote the behavior of an isolated particle in an unbounded medium.}
     \label{fig:resistance}
 \end{figure}
@@ -270,14 +270,14 @@ Figure \ref{fig:Collision} illustrates the dynamics of two such particle ``colli
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=9cm]{Collision}
+    \includegraphics[width=9cm]{figures/A1_Collision.pdf}
     \caption{ Simulated particle ``collisions'' with the lower electrode for a particle charge (a) $q=\pm0.5q_s$ and (b) $q=\pm1.058q_s$. The solid curve shows the trajectory of the particle center; the orientation of the particle at different points along the trajectory is illustrated graphically. The net particle displacement $\Delta$ depends on the surface separation $\delta$ at ``contact'' when the particle charge reverses polarity. Note that for clarity the $z$ and $y$ axes use different scales.}
     \label{fig:Collision}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=9cm]{Displacement}
+    \includegraphics[width=9cm]{figures/A1_Displacement.pdf}
     \caption{Net displacement $\Delta$ of a Janus particle during a single particle ``collision`` as a function of the particle charge $q$ for three different contact separations $\delta$. Note that when the charge acquired is below some critical value (open circles), the particle remains bound to the electrode \cite{drews2015contact}.}
     \label{fig:Displacement}
 \end{figure}
