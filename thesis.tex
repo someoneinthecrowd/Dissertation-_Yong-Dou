@@ -24,6 +24,9 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage[symbol]{footmisc}
+\usepackage[symbol]{footmisc}
+
 %\usepackage{lmodern} % font choice 
 
 
@@ -101,6 +104,8 @@
 \renewcommand{\cftsubsecafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment
 \renewcommand{\cftsubsubsecafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment
 \newcommand{\ve}[1]{\boldsymbol{#1}}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %format title font size and position (this also applys to list of figures and list of tables)
 \titleformat{\chapter}[display]

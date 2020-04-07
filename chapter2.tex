@@ -1,30 +1,46 @@
-\chapter{Directed motion of metallodielectric particles by contact charge electrophoresis}
+\chapter{Directed motion of metallodielectric particles by contact charge electrophoresis$^{*}$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}\footnotetext{This chapter is adapted from  Dou, Yong, et al. "Directed motion of metallodielectric particles by contact charge electrophoresis." Langmuir 32.49 (2016): 13167-13173. }
 
-Self-propelled colloidal particles harness energy from their environment to power directed motions relative to their fluid surroundings \cite{ebbens2016active,Li2016,Dey2016}.
-Inspired by the locomotion of micro-organisms \cite{Lauga2009}, these artificial swimmers are actively pursued for their potential to navigate complex environments \cite{Takagi2014,Das2015} and deliver cargo to targeted locations\cite{Gao2015,Baylis2015}.
-Fluid flows induced by particle motions can also serve to enhance rates of mass transfer to/from the particle surface with emerging applications in water remediation\cite{Soler2013,Li2014} and chemical detection\cite{morales2014micromotor,kagan2009chemical}.
-When many self-propelled particles get together, they often interact to form dynamic assemblies\cite{Wang2015} such as swarms\cite{Ibele2009,Nguyen2012}, flocks \cite{Bricard2013}, clusters\cite{JieZhang2016}, and crystals \cite{Palacci2013}.
-Synthetic realizations of such active matter\cite{Marchetti2013} provide useful models by which to explore the many forms of self-organization that arise outside of thermodynamic equilibrium.
+\begin{center}
+\vspace*{1\baselineskip}
+\textbf{Abstract}
+\end{center}
+We investigate the dynamics of metallodielectric Janus particles moving via contact charge electrophoresis (CCEP) between two parallel electrodes.
+CCEP uses a constant voltage to repeatedly charge and actuate conductive particles within a dielectric fluid resulting in rapid oscillatory motion between the electrodes.
+In addition to particle oscillations, we find that micron-scale Janus particles move perpendicular to the field at high speeds (up to $600~\mu\text{m/s}$) and over large distances.
+We characterize these self-propelled motions and propose a mechanism based on the rotation-induced translation of the particle following charge transfer at the electrode surface. 
+The propulsion mechanism is supported both by experiments on  fluorescent particles that reveal their rotational motions and by simulations of CCEP dynamics that capture the relevant electrostatics and hydrodynamics.
+We also show that interactions among multiple particles can lead to repulsion, attraction, and/or cooperative motions depending on the position and phase of the respective particle oscillators.
+Our results demonstrate how particle asymmetries can be used to direct the motions of active colloids powered by CCEP.
+
+
+
+\section{Introduction}\footnotetext[1]{This chapter is adapted from  Dou, Yong, et al. "Directed motion of metallodielectric particles by contact charge electrophoresis." Langmuir 32.49 (2016): 13167-13173. }
+
+
+Self-propelled colloidal particles harness energy from their environment to power directed motions relative to their fluid surroundings \autocite{ebbens2016active,Li2016,Dey2016}.
+Inspired by the locomotion of micro-organisms \autocite{Lauga2009}, these artificial swimmers are actively pursued for their potential to navigate complex environments \autocite{Takagi2014,Das2015} and deliver cargo to targeted locations\autocite{Gao2015,Baylis2015}.
+Fluid flows induced by particle motions can also serve to enhance rates of mass transfer to/from the particle surface with emerging applications in water remediation\autocite{Soler2013,Li2014} and chemical detection\autocite{morales2014micromotor,kagan2009chemical}.
+When many self-propelled particles get together, they often interact to form dynamic assemblies\autocite{Wang2015} such as swarms\autocite{Ibele2009,Nguyen2012}, flocks \autocite{Bricard2013}, clusters\autocite{JieZhang2016}, and crystals \autocite{Palacci2013}.
+Synthetic realizations of such active matter\autocite{Marchetti2013} provide useful models by which to explore the many forms of self-organization that arise outside of thermodynamic equilibrium.
 Importantly, the diverse behaviors of motile particles depend critically on the specific mechanism of self-propulsion and on the associated interactions among the particles.
 Expanding the repertoire of colloidal self-propulsion can therefore enable the discovery of new dynamical behaviors as well as the development of future applications.
 
 A wide variety of physicochemical mechanisms have been applied to power the self-propulsion of colloidal particles.
-Self-phoretic mechanisms\cite{golestanian2007designing} use asymmetries in particle shape and/or composition to create local gradients in the electric potential\cite{Brown2014}, chemical composition\cite{Howse2007}, or temperature\cite{Jiang2010} that drive particle motions via interfacial phoretic effects such as electrophoresis, diffusiophoresis, or thermophoresis, respectively\cite{Anderson1989}.
-In a classic example\cite{Paxton2004,Fournier-Bidoz2005}, bimetallic nanorods move autonomously through a homogeneous liquid containing a suitable chemical fuel via reaction-induced  self-electrophoresis\cite{Wang2006,Moran2010}. 
+Self-phoretic mechanisms\autocite{golestanian2007designing} use asymmetries in particle shape and/or composition to create local gradients in the electric potential\autocite{Brown2014}, chemical composition\autocite{Howse2007}, or temperature\autocite{Jiang2010} that drive particle motions via interfacial phoretic effects such as electrophoresis, diffusiophoresis, or thermophoresis, respectively\autocite{Anderson1989}.
+In a classic example\autocite{Paxton2004,Fournier-Bidoz2005}, bimetallic nanorods move autonomously through a homogeneous liquid containing a suitable chemical fuel via reaction-induced  self-electrophoresis\autocite{Wang2006,Moran2010}. 
 Self-propelled motions of asymmetric particles can also be powered by external fields.
-Alternating electric fields drive motions of polarizable particles by induced charge electrophoresis \cite{Squires2006,Gangwal2008,Boymelgreen2014}; alternating magnetic fields power the swimming of flexible magnetic particles by inducing non-reciprocal beating motions \cite{Dreyfus2005}; acoustic fields propel dense metallic particles by directing steady streaming flows\cite{Wang2012,Nadal2014,Ahmed2015}. 
+Alternating electric fields drive motions of polarizable particles by induced charge electrophoresis \autocite{Squires2006,Gangwal2008,Boymelgreen2014}; alternating magnetic fields power the swimming of flexible magnetic particles by inducing non-reciprocal beating motions \autocite{Dreyfus2005}; acoustic fields propel dense metallic particles by directing steady streaming flows\autocite{Wang2012,Nadal2014,Ahmed2015}. 
 These examples of field-driven particle motion are generally considered forms of self-propulsion, as they allow particles to move freely in multiple directions (typically those perpendicular to the applied field).
 The use of external fields to power such motions is attractive for studies of active matter as their magnitude is tunable in space and time.
 
-Here, we describe a type of colloidal self-propulsion in which an electric field drives the autonomous motion of metallodielectric Janus particles\cite{Perro2005,Pawar2008} within an insulating liquid between two plane electrodes (Fig.~\ref{fig:2.1}a).
-Similar configurations have been used to investigate particle motions powered by induced charge electrophoresis within conductive liquids\cite{Boymelgreen2014} and by Quicke rotation within weakly conductive liquids \cite{Bricard2013}.
-By contrast, field-driven  motion of conductive particles in insulating liquids is driven by contact charge electrophoresis (CCEP) whereby particles acquire charge on contact with a biased electrode and then move in the field emanating from that electrode \cite{drews2013ratcheted,cartier2014microfluidic,drews2015contact}.
-In one well studied example, a conductive sphere immersed in mineral oil oscillates rapidly between two electrodes subject to a constant voltage \cite{drews2015contact}.
+Here, we describe a type of colloidal self-propulsion in which an electric field drives the autonomous motion of metallodielectric Janus particles\autocite{Perro2005,Pawar2008} within an insulating liquid between two plane electrodes (Fig.~\ref{fig:2.1}a).
+Similar configurations have been used to investigate particle motions powered by induced charge electrophoresis within conductive liquids\autocite{Boymelgreen2014} and by Quicke rotation within weakly conductive liquids \autocite{Bricard2013}.
+By contrast, field-driven  motion of conductive particles in insulating liquids is driven by contact charge electrophoresis (CCEP) whereby particles acquire charge on contact with a biased electrode and then move in the field emanating from that electrode \autocite{drews2013ratcheted,cartier2014microfluidic,drews2015contact}.
+In one well studied example, a conductive sphere immersed in mineral oil oscillates rapidly between two electrodes subject to a constant voltage \autocite{drews2015contact}.
 Each time the particle contacts an electrode, it acquires charge of opposite polarity and moves back towards the other electrode thereby transporting charge down the applied potential gradient.
 Harnessing these motions for useful functions requires strategies by which to rectify particle oscillations.
-One approach is to modify the electrodes with asymmetric, ratchet-like features that enable directed transport of conductive particles\cite{drews2013ratcheted} or droplets\cite{Um2016}.
+One approach is to modify the electrodes with asymmetric, ratchet-like features that enable directed transport of conductive particles\autocite{drews2013ratcheted} or droplets\autocite{Um2016}.
 Here, we introduce an alternative strategy that relies on particle asymmetries to achieve similar directed motions.
 
 We show that oscillations of Janus particles between two parallel electrodes are accompanied by steady motions directed perpendicular to the applied field.
@@ -32,7 +48,7 @@ Through experiment and theory, we develop and validate a mechanism of self-propu
 Repeated displacements in a common direction propel Janus particles at speeds of up to $600~\mu\text{m/s}$ along wide circular arcs within the plane of the electrodes.
 Beyond the dynamics of individual particles, we show how particles can both attract or repel one another depending on their separation and on the phases of their respective oscillations.
 Together, these results demonstrate how particle symmetry can be used to direct the motions of active colloids powered by CCEP.
-The ability to engineer the motions of individual particles and their assemblies will ultimately contribute to the realization of colloidal machines that organize and operate autonomously to perform useful functions \cite{Spellings2015}.
+The ability to engineer the motions of individual particles and their assemblies will ultimately contribute to the realization of colloidal machines that organize and operate autonomously to perform useful functions \autocite{Spellings2015}.
 
 \begin{figure}[p]
 \centering
@@ -58,11 +74,11 @@ Directed particle motion continued over large distances for as long as the volta
 \subsection{Synthesis of Janus Particles}
 
 Silica Janus particles were prepared by  deposition of gold onto particle monolayers supported on glass slides.
-Following Prevo and Velev \cite{prevo2004controlled}, $10~\mu\text{L}$ of a concentrated (30 wt\%) suspension of $8~\mu\text{m}$ silica particles in water was placed between two acid-cleaned microscope slides mounted at an angle on a motorized stage (Harvard Apparatus PHD 2000).
+Following Prevo and Velev \autocite{prevo2004controlled}, $10~\mu\text{L}$ of a concentrated (30 wt\%) suspension of $8~\mu\text{m}$ silica particles in water was placed between two acid-cleaned microscope slides mounted at an angle on a motorized stage (Harvard Apparatus PHD 2000).
 The trapped colloidal solution was dragged at a prescribed speed by the motion of the top slide to achieve well-packed monolayers.
 Successive layers of metal (5 nm Ti and 10 nm Au) were then deposited by physical vapor deposition (Cressington 308).
 
-Fluorescent Janus particles were prepared following a procedure adapted from Kopelman et al. \cite{Sinn2011}.
+Fluorescent Janus particles were prepared following a procedure adapted from Kopelman et al. \autocite{Sinn2011}.
 Briefly, sulfonated fluorescent polystyrene particles (ThermoFisher F8858) were washed three times in water by centrifugation and dispersed in methanol at a concentration of 1\% w/v. 
 0.5 ml of the particle suspension was deposited onto a 4-inch silicon wafer wafer by spin coating at 2500 rpm for 15 second. 
 Successive layers of metal (5 nm Ti, 25 nm Ni, and 20 nm Au) were then deposited by e-beam evaporation (Kurt J Lesker Co. Lab 18). 
@@ -74,7 +90,7 @@ The particles were gently brushed off the wafer using a damp brush.
 The electrode setup was comprised of two transparent  indium tin oxide (ITO)-coated glass slides (SIGMA-Aldrich, CAS:50926-11-9, surface resistivity 70-100 $\Omega$/sq) separated from one another by spacers made of glass ($150~\mu\text{m}$ to $250~\mu\text{m}$ thick cover slides) or polydimethylsiloxane (PDMS, $50~\mu\text{m}$ to $100~\mu\text{m}$ thick).
 The ITO electrodes were connected to a high-voltage source (Keithley 2410) with a limiting current of $10~\mu\text{A}$ to prevent damage to the system in the event of a short-circuit.
 The Janus particles were dispersed in Nylon membrane-filtered mineral oil (SIGMA-Aldrich, CAS:8042-47) at a concentration of $0.01-1~\text{mg/ml}$ and injected into the inter-electrode region.
-We note that the charge relaxation time for mineral oil is considerably larger the the timescale of particle oscillations, which is a necessary condition for CCEP \cite{cartier2014microfluidic}. 
+We note that the charge relaxation time for mineral oil is considerably larger the the timescale of particle oscillations, which is a necessary condition for CCEP \autocite{cartier2014microfluidic}. 
 The field-induced motion of the Janus particles was captured by a high speed camera (Phantom V310) mounted on an optical microscope (Zeiss Axio Imager A1) operating in bright field mode with 10x and 50x objectives.
 
 \subsection{Particle Tracking}
@@ -84,23 +100,23 @@ To determine the oscillation frequency, we first identified a fixed window aroun
 This average intensity oscillated in time as the particle moved into and out of focus, reaching its local minimal value when the particle came into focus at the lower electrode.
 For each oscillation cycle $i=1,2,\dots, N$, we identified the time $t_i$ when the particle contacted the lower electrode. 
 The mean oscillation frequency was then computed by dividing the number of particle oscillations by the total observation time, $f= N / (\Sigma_i t_i)$.
-To reconstruct particle trajectories $(x_i,y_i)$, we considered only those frames when the particle was in focus (i.e., when the average intensity was in local minimum) and determined the location of the particle center using standard algorithms \cite{Track}.
+To reconstruct particle trajectories $(x_i,y_i)$, we considered only those frames when the particle was in focus (i.e., when the average intensity was in local minimum) and determined the location of the particle center using standard algorithms \autocite{Track}.
 The net displacement for cycle $i$ was computed as $\Delta_i^2 = (x_{i+1} - x_i)^2 + (y_{i+1}-y_i)^2$; the average speed of the particle (parallel to the electrodes) was computed as $U_{\perp} = (\Sigma_i \Delta_i)  /  (\Sigma_i t_i$).
 
 \subsection{Simulation of CCEP Motions}
 
-The model of CCEP dynamics combines classical electrostatics and low Reynolds number hydrodynamics \cite{drews2015contact}. 
+The model of CCEP dynamics combines classical electrostatics and low Reynolds number hydrodynamics \autocite{drews2015contact}. 
 The metallic hemisphere of the Janus particle as well as the bounding electrodes are treated as perfect conductors.
 To facilitate our numerical analysis, the conductive portion of the particle is modeled as a solid hemisphere with rounded corners (radius $0.1a$) in contrast to the thin hemispherical cap present in experiment.
 Additionally, the non-metallic hemisphere and the surrounding fluid are assumed to be dielectrics with a common permittivity $\varepsilon$.
 Given the particle charge $q$, orientation $\alpha$, and height $z_p$ above the electrode surface, we solve the Laplace equation numerically to determine the electric potential $\Phi$ and field $\ve{E}=-\nabla \Phi$ throughout the dielectric medium (see Supporting Information for details).
 We then integrate the Maxwell stress over the surface of the conductive hemisphere to determine the electric force and torque that drive particle motion.
 
-At low Reynolds numbers (in experiments $Re\leq0.01$), the translational and rotational velocities of the particle are linearly related to the external force and torque by the so-called resistance tensor \cite{Kim2005, Swan2007}.
-For a spherical particle near a solid plane boundary, there exist exact analytical expressions \cite{Kim2005} for the components of this tensor, which, when suitably rescaled, depends only on the separation between the sphere and the plane. 
+At low Reynolds numbers (in experiments Re$\leq0.01$), the translational and rotational velocities of the particle are linearly related to the external force and torque by the so-called resistance tensor \autocite{Kim2005, Swan2007}.
+For a spherical particle near a solid plane boundary, there exist exact analytical expressions \autocite{Kim2005} for the components of this tensor, which, when suitably rescaled, depends only on the separation between the sphere and the plane. 
 Using these expressions, we compute the particle velocity and integrate numerically to determine the position and orientation of the particle as a function of time.
 We assume that the charge $q$ on the particle remains constant until the surface of the metallic hemisphere reaches some critical separation $\delta$ from the plane electrode, at which point charge flows to/from the particle instantaneously to reverse the particle polarity ($q\rightarrow -q$).
-Physically, the contact charging process is thought to occur by a type of dielectric breakdown; the resulting charge on the particle is somewhat variable but consistently less than that expected at equilibrium (i.e., when the potential on the particle equals that of the electrode) \cite{drews2015contact}.
+Physically, the contact charging process is thought to occur by a type of dielectric breakdown; the resulting charge on the particle is somewhat variable but consistently less than that expected at equilibrium (i.e., when the potential on the particle equals that of the electrode) \autocite{drews2015contact}.
 After nondimensionalization, the computed particle trajectories depend on just two parameters: the dimensionless charge $q / 4\pi\varepsilon a^2 E$ and the dimensionless separation at contact $\delta / a$.
 
 
@@ -114,7 +130,7 @@ Although the majority of particles (ca.~70\% for $V=800~\text{V}$ and $H=200~\mu
 Additionally, some particles (ca.~20\%) remained ``stuck'' to the electrode surface and did not move at all upon application of the field.
 
 For the particles that moved, the oscillation frequency increased monotonically with increasing voltage as $f \propto V^{2}$ (Fig.~\ref{fig:2.2}c).
-This observation is consistent with previous studies of CCEP motion, which showed that the oscillation frequency scales as $f\sim\varepsilon a V^2 / \eta H^3$, where $\varepsilon$ and $\eta$ are the permittivity and viscosity of the fluid, respectively, and $a$ is the particle radius \cite{drews2015contact}.
+This observation is consistent with previous studies of CCEP motion, which showed that the oscillation frequency scales as $f\sim\varepsilon a V^2 / \eta H^3$, where $\varepsilon$ and $\eta$ are the permittivity and viscosity of the fluid, respectively, and $a$ is the particle radius \autocite{drews2015contact}.
 By contrast, the lateral displacement of the particle during each oscillation cycle was largely independent of the applied voltage; each oscillation contributed an average displacement of $\Delta = 0.2 a$ (Fig.~\ref{fig:2.2}d).
 Consequently, the lateral velocity of the particle, $U_{\perp}\equiv f\Delta$, also increased as the square of the applied voltage (Fig.~\ref{fig:2.2}e).
 This velocity could be further increased by decreasing the spacing between the electrodes $H$ to increase the magnitude of the applied field (Fig.~\ref{fig:2.2}f). 
@@ -182,7 +198,7 @@ This prediction of the model provides a plausible explanation for those particle
 There are some experimental observations that are not captured by the idealized model.
 Notably, the model predicts that particles should move along straight lines and not the circular trajectories observed in experiment.
 We attribute this discrepancy to defects on the Janus particles that break their axial symmetry.
-Imperfections in the particles' metallic hemispheres are known to arise during metal deposition due to shadowing by neighboring particles \cite{Pawar2008}.
+Imperfections in the particles' metallic hemispheres are known to arise during metal deposition due to shadowing by neighboring particles \autocite{Pawar2008}.
 Such defects can lead to electric torques about the principle axis of the particle, which are otherwise prohibited by symmetry.
 As a result, particles are permitted to change their orientation in the plane of the electrode upon charge reversal.
 Understanding these effects requires further study of non-axisymmetric particles of well defined shape.
@@ -201,11 +217,11 @@ Ultimately, the magnitude of the displacement is limited by the size of the part
 
 Beyond the motions of individual particles, we observed several interesting  behaviors in systems of two or more interacting particles (Fig.~\ref{fig:2.5}).
 When two particles were separated by a distance less than the electrode spacing ($d<H$), they influenced one another at a distance through electrostatic interactions.
-These interactions were either attractive or repulsive depending on the respective phases of the particle oscillations\cite{mersch2011antiphase}.
+These interactions were either attractive or repulsive depending on the respective phases of the particle oscillations\autocite{mersch2011antiphase}.
 Like-charged particles oscillating ``in phase'' repelled one another as evidence by an increase in particle separation with time (Fig.~\ref{fig:2.5}a).
 By contrast, oppositely-charged particles oscillating ``out of phase'' moved toward one another in time (Fig.~\ref{fig:2.5}b).
 Due to slight differences in their oscillation frequencies, two particles often transitioned repeatedly between attractive and repulsive regimes.
-This particle ``dance'' could end in two different ways: either the particles moved off in different directions to find new partners, or they embraced one another to form a dynamic oscillating chain (a so-called bucket brigade \cite{Pelesko2004a}).
+This particle ``dance'' could end in two different ways: either the particles moved off in different directions to find new partners, or they embraced one another to form a dynamic oscillating chain (a so-called bucket brigade \autocite{Pelesko2004a}).
 Finally, we observed that interacting particles often moved together in a common direction -- typically, along the line connecting the particle centers (Fig.~\ref{fig:2.5}c).
 Such coordinated motions were considerably faster that the propulsion velocity of individual Janus particles perhaps suggesting an additional strategy for directing CCEP motions.
 Importantly, we confirmed that the above effects involving two or more particles were also observed among spherically isotropic (non-Janus) particles.
@@ -227,8 +243,8 @@ Contact charge electrophoresis drives the rapid oscillatory motion of conductive
 Particle asymmetries can be used to rectify such oscillatory motions to achieve directed transport perpendicular to the applied field.
 Rectified motions derive from particle rotations near the electrode surface upon contact charge transfer, which lead to repeated displacements in a common direction.
 This type of self-propulsion exhibits several characteristics that distinguish it from related systems based on self-phoresis, induced-charge electrophoresis, or Quicke rotation.
-Owing to the negligible electric currents through the nonpolar fluid, particle motions are highly efficient and require small energy inputs (ca.~1 nW / particle) \cite{drews2015contact}. 
-Rapid particle motions can enhance microscale mixing within nonpolar fluids \cite{cartier2014microfluidic}, which could be harnessed to accelerate catalytic reactions limited by mass transfer.
+Owing to the negligible electric currents through the nonpolar fluid, particle motions are highly efficient and require small energy inputs (ca.~1 nW / particle) \autocite{drews2015contact}. 
+Rapid particle motions can enhance microscale mixing within nonpolar fluids \autocite{cartier2014microfluidic}, which could be harnessed to accelerate catalytic reactions limited by mass transfer.
 Long-ranged electrostatic interactions among the particles results in complex collective motions relevant to the study of active matter.
 Importantly, the directed CCEP motions of asymmetric particles can in principle be engineered by tuning the particle shape and surface composition.
 The rational design of such active components is a critical prerequisite for constructing dynamic colloidal assemblies capable of useful functions -- that is, colloidal robots.
