@@ -6,7 +6,7 @@
 
 %Begin individual appendices, separated as chapters
 
-\chapter{Supporting Information for chapter 3}
+\chapter{Supporting information for chapter 3}
 
 In this appendix, several additional experimental results are shown to characterize the formation and dynamics of travelling waves in Chapter 4. The breaking frequency and maximum wavelength are depend on the number of actuators. We also perform additional simulations of a more detailed model to assess the importance  of  amplitude  dynamics.  These simulations  reveal  that  the  approximate  model  based  on  weakly-coupled  phase  oscillators performs well for the experimental conditions.
 
@@ -68,7 +68,7 @@ In this appendix, several additional experimental results are shown to character
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Supplementary Note 1: Amplitude dynamics}
+\section{Amplitude dynamics}
 
 In the main text, we model the particles as weakly-coupled phase oscillators and neglect the amplitude dynamics.  Here, we validate that approximation using numerical solutions of the corresponding ``exact'' model that includes amplitude dynamics.  In particular, we consider the dynamics of $N$ oscillators moving between two nearly parallel electrodes subject to a constant voltage $V$.  The electrode separation $L_i$ at the location of oscillator $i$ is assumed to vary linearly as $L_i=L_o - \Delta L[i + \tfrac{1}{2}(N+1)]$, where $L_o$ is the average separation and $\Delta L$ is the difference in the separation between neighboring oscillators.  The latter is related to the small angle $\theta$ between the electrodes as  $\Delta L / W =  \tan\theta \ll1$.  The external electric field acting on oscillator $i$ is approximated as $E_i=V/L_i$.
 
@@ -96,7 +96,7 @@ It is convenient to non-dimensionalize this model by scaling lengths by $L_o$, f
 \end{figure}
 
 \clearpage
-\subsection{Supplementary Note 2: Stationary solution}
+\section{Stationary solution}
 
 The stationary solution $f(\chi_n)=\tfrac{1}{2}\Delta n(n-N)$ is obtained by solving the following set of linear recurrence equations derived in the Methods,
 \begin{align}
@@ -113,7 +113,7 @@ where $f_n=f(\chi_n)$.  Equation (\ref{eq:mid}) has the following general soluti
 The constants $C_1$ and $C_2$ are determined by substituting this result into the boundary conditions (\ref{eq:bc1}) and (\ref{eq:bc2}).  As the equations are linear, the resulting solution for $f_n$ is unique. However, when $|f_n| > f_{\max}$, there exists no value of the phase difference $\chi_n$ that satisfies the equation $f(\chi_n)=f_n$.  Alternatively, when $|f_n|<f_{\max}$, there exists two possible solutions for the phase difference---one with $f'(\chi_n)>0$ and another with $f'(\chi_n)<0$ as can be seen graphically in Figure 3b of the main text.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Supplementary Note 3: Stability of the stationary solution}
+\section{Stability of the stationary solution}
 
 As noted above, there are two possible solutions for each of the $N-1$ phase differences.  In both experiment and simulations, we observed only one of these possible solutions in which $f'(\chi_n)<0$ for all $n$.  Here, we confirm the stability of this solution to small perturbations using a continuum approximation, in which the phase difference $\chi_n(t)$ is replaced by a continuous function $\chi(n,t)$. In this limit, the dynamics of the phase difference can be approximated as
 \begin{equation}

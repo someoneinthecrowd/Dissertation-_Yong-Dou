@@ -6,10 +6,10 @@
 
 %Begin individual appendices, separated as chapters
 
-\chapter{Supporting Information for chapter 4}
+\chapter{Supporting information for chapter 4}
 In this appendix, firstly, we use perturbation theory to derive that fixed radius is requirement for microswimmers' effective navigation. Then the theoretical details are shown to solve the diffusion, hydrodynamics and motions of shape-shifting autophoretic clusters. We also investigate how the thermal noise influences the efficiency of navigation. Finally, we show how to define different target function to achieve navigation behaviors towards different directions 
 
-\section{Equations of motion}
+\section{Equations of Motion}
 
 As described in the main text, we consider a particle at location $\ve{x}_p=[x_p,y_p]$ with orientation $\theta$ moving with a linear velocity $\ve{U}$ and angular velocity $\Omega$.  The components of the linear velocity in the particle frame are parameterized as $\ve{U}=[U \cos\alpha, U\sin \alpha]$, where $U$ is the linear speed and the angle $\alpha$ describes the direction of motion in the particle frame.  The resulting particle dynamics are given by
 \begin{align}
@@ -29,7 +29,7 @@ where $R=\Omega/U$ is the radius of curvature of the particle trajectory (in the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Approximate solution for weak gradients}
+\subsection{Approximate Solution for Weak Gradients}
 
 In the absence of a stimulus gradient ($G=0$), equations(\ref{eq:xp2}) and (\ref{eq:yp2}) describe a simple circular orbit of radius $R$
 \begin{align}
@@ -64,7 +64,7 @@ where the prime denotes differentiation with respective to the slow variable. To
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Choice of sensor location}
+\subsection{Choice of Sensor Location}
 
 The particle's velocity is assumed to depend on the stimulus magnitude evaluated at the particle center $\ve{x}_p$.  If the stimulus magnitude is instead evaluated at a different position on the particle $\ve{x}_s\neq \ve{x}_p$, the resulting dynamics will be slightly different.  However, such differences are negligible when the characteristic size of the particle is much smaller than the radius of its periodic orbit.  To show this, we consider how the drift velocity depends on the sensor position $\ve{x}_s$, at which the stimulus is ``sensed'' by the particle.  We assume that the particle has fixed response functions $R(S)$ and $\alpha(S)$ where $S = S(\ve{x}_s(t))$. In the particle frame, we defined the constant displacement between the sensor and the particle center as $\ve{x}_s-\ve{x}_p =[\delta \cos\beta, \delta \sin\beta]$.  The dynamics of equations (\ref{eq:xp2}) and (\ref{eq:yp2}) are modified as
 \begin{align}
@@ -85,7 +85,7 @@ Averaging over the fast variable $\tau$ from 0 to $2\pi$, we obtain the followin
     \langle \partial_{\tau} y_1 \rangle &= \tfrac{1}{2} G R^2\alpha' \left( \frac{\delta}{R} \cos(\alpha-\beta) \right) + \tfrac{1}{2} G R R'\left( 1 + \frac{\delta}{R}\sin(\alpha-\beta) \right) \label{eq:ydrift2}
 \end{align}
 Changes in the location of the sensor give rise to corrections in the drift velocity of order $\delta/R$ relative to equations (\ref{eq:drift}) and (\ref{eq:drift2}).  Figure \ref{fig:SensorLocation} shows two computed particle trajectories with $\delta=0$ and $\delta = 0.1 R$ to illustrate the effect of sensor location on particle chemotaxis.
-\section{Model details for rigid self-phoretic clusters}
+\section{Model Details for Rigid Self-phoretic Clusters}
 
 We consider the self-phoretic propulsion of a rigid cluster of $N$ solid spheres of radii $a_j$. Each sphere $j$ releases a constant flux $A_j$ of a solute from its surface $\mathcal{S}_j$  
 \begin{equation}
@@ -311,7 +311,7 @@ The active angular velocity $\ve{\Omega}_j^A$ depends on the second order moment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\section{Definition of standard shapes for shape-shifting particles}
+\section{Definition of Standard Shapes for Shape-shifting Particles}
 
 In a shape-shifting cluster, the relative positions and orientations of the spheres are characterized by a single degree of freedom parameterized by $s$. To describe the kinematics of this shape-changing particle, we introduce two coordinate systems: the lab frame $\ve{x}=[x,y,z]$ and the particle frame $\ve{x}'=[x',y',z']$.  If $\ve{v}$ is a vector in the lab frame, then $\ve{v}'=\ve{R}\ve{v}$ is the same vector in the particle frame, where $\ve{R}$ is a rotation matrix that characterizes the relative orientation of the two frames (e.g., specified by the unit quaternion $\ve{q}$).  The position of sphere $j$ in the lab frame is given by 
 \begin{equation}
@@ -352,7 +352,7 @@ For each shape $\ve{x}_j(s)$, the autophoretic velocity can be computed as detai
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\section{Designed cluster moving down the gradient}
+\section{Designed Cluster Moving Down the Gradient}
 
 The objective function of equation (3) in the main text ensures that the particle will move parallel to the gradient direction; however, it does not specify the direction of motion up or down the gradient.  For the three sphere cluster considered in Figure 3, the optimal geometry combined with the specific sigmoidal relation between the shape parameter $s$ and the stimulus $S$ leads to autonomous navigation up the gradient (i.e., positive chemotaxis). To design the opposite behavior, we introduce an additional constraint to the optimization problem that the orientation of the propulsion velocity $\alpha$ must increase with the shape parameter $s$---that is, $d\alpha/ds>0$.  With this constraint, optimization of the design variables $\ve{d}$ to minimize variations in the specified radius $R_0$ leads to a new particle geometry that exhibits a negative chemotactic response (Fig.\ \ref{fig:negChemo}). 
 
@@ -369,7 +369,7 @@ The objective function of equation (3) in the main text ensures that the particl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\section{Designed cluster moving perpendicular to the gradient}
+\section{Designed Cluster Moving Perpendicular to the Gradient}
 
 To design clusters that move perpendicular to the gradient direction, we use a different objective function that characterizes the variations in the propulsion angle $\alpha$ about its mean value (which can be set to zero without loss of generality)
 \begin{equation}
@@ -391,11 +391,11 @@ Moreover, we constrain the quantity $d R/d s$ to be positive or negative to cont
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\section{Derivation of the drift velocity with Brownian motion}
+\section{Derivation of the Drift Velocity with Brownian Motion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Analytical solution of a simplified model}
+\subsection{Analytical Solution of a Simplified Model}
 
 To describe the effects of Brownian motion on the shape-directed dynamics of active particles, we introduce fluctuating forces, $F_x(t)$ and $F_y(t)$, and torque, $L(t)$, to the deterministic dynamics of equations (\ref{eq:theta}), (\ref{eq:xp}), and (\ref{eq:yp}) for the particle orientation $\theta$ and position $x,y$
 \begin{align}
@@ -434,7 +434,7 @@ For high P\'eclet number ($\text{Pe}_r\gg1$), this result is identical to that o
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Numerical solution of the Langevin equation}
+\subsection{Numerical Solution of the Langevin Equation}
 
 To simulate particle motions with arbitrary response functions and stimulus landscapes, we also implemented numerical simulations of the following Langevin equation for translational and rotational motion,
 \begin{equation}

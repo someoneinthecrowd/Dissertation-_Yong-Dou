@@ -8,7 +8,7 @@ Traveling waves of mechanical actuation provide a versatile strategy for locomot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{introduction} \footnotetext[1]{This chapter is adapted from  "Dou, Y., Pandey, S., Cartier, C. A., Miller, O., & Bishop, K. J. (2018). Emergence of traveling waves in linear arrays of electromechanical oscillators. \textit{Communications Physics}, 1(1), 1-9."}
+\section{Introduction} \footnotetext[1]{This chapter is adapted from  "Dou, Y., Pandey, S., Cartier, C. A., Miller, O., & Bishop, K. J. (2018). Emergence of traveling waves in linear arrays of electromechanical oscillators. \textit{Communications Physics}, 1(1), 1-9."}
 
 Traveling waves of mechanical actuation provide a versatile strategy for locomotion and transport in both natural\autocite{Cohen1982, Blake1974, Taylor447, purcell1977life} and engineered\autocite{Palagi2016,Park2016} systems across many scales. In vertebrates such as the aquatic lamprey \autocite{Cohen1982, Cohen1992}, these and other rhythmic motor patterns are orchestrated by networks of neurons called central pattern generators (CPGs) \autocite{Marder2001}, which are often idealized as systems of coupled oscillators \autocite{Cohen1982, Cohen1992}. The rhythmic output of these oscillators is relayed to actuators (e.g., muscles) to produce complex motions without the need for sensory feedback. Similar control strategies based on CPGs are used to direct  locomotion in macroscopic robots \autocite{Ijspeert2008}. At smaller scales, however, it becomes increasingly challenging to accommodate centralized control systems capable of directing the coordinated actions of multiple actuators. Instead, microorganisms such as ciliated protozoa integrate pattern generation and mechanical actuation within a single material system.  The oscillatory motions of beating cilia couple to one another through hydrodynamic interactions to produce metachronal waves that drive cellular locomotion through viscous surroundings \autocite{Blake1974, Niedermayer2008, Elgeti2013}. This biological example illustrates how the coupled motions of many mechanical oscillators can organize spontaneously and autonomously to perform dynamic functions.}
 
@@ -116,7 +116,7 @@ Beyond this initial demonstration, traveling wave synchronization of CCEP oscill
 \section{Methods}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Experiment Set-up.} 
+\subsection{Experiment Set-up} 
 Periodic arrays of dielectric tracks were 3D printed in acrylonitrile butadiene styrene (ABS) with a period of $W=3-5$ mm. The array was sandwiched between two copper plates separated by a distance $L=10-30$ mm (McMaster-Carr 3350K201) and immersed in mineral oil (Sigma Aldrich CAS No.~8042-47-5). The tracks were aligned perpendicular to the electrode surfaces and to the direction of gravity. Each track contained a single copper sphere (McMaster-Carr No.~64715K16, radius $a=1$ mm), which rolled freely between the two electrodes (Fig.~\ref{fig:3.1}a). Prior to use, the system was heated in a 60$^\text{o}$C oven for several hours to remove any moisture. The copper electrodes were connected to a amplifier (Trek 20/20C) with an output voltage $V=0-20$ kV.  The particles were illuminated from below by a light emitting diode (LED) and their motions captured by a high-speed camera (Phantom V310).  During each experiment, the electrodes were energized to a specified voltage and the resulting particle motions captured. The voltage was switched off for at least one minute between successive experiments to allow for the dissipation of any space charge accumulated on the surfaces of the tracks and/or the electrodes.  Particle location data were extracted using standard image tracking routines in MATLAB.
 
 
@@ -124,7 +124,7 @@ Periodic arrays of dielectric tracks were 3D printed in acrylonitrile butadiene 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Electrostatic Interactions.}
+\subsection{Electrostatic Interactions}
 We first consider a single point charge $q$ positioned at a height $z=h$ between two grounded planes at $z=0$ and $z=L$.  The resulting electrostatic potential at point $\ve{x}$ is 
 \begin{equation}
     \phi(\ve{x}) = \frac{q}{\pi L \varepsilon} \sum_{m=1}^{\infty} \sin\left(\frac{m\pi h}{L}\right)  \sin\left(\frac{m\pi z}{L}\right) K_0\left(\frac{m \pi r}{L}\right),\label{eq:point}
@@ -161,7 +161,7 @@ This final expression is plotted in Figure \ref{fig:3.4}b for the case of $W/L=0
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Stationary Solution.} 
+\subsection{Stationary Solution} 
 Starting from Eq.~(\ref{eq:phase}), we recast the oscillator dynamics in terms of the phase difference $\chi_n=\varphi_{n+1} - \varphi_n$ and the average phase $\Phi=\tfrac{1}{N}\sum_n\varphi_n$.  Taking the difference in the phase dynamics of successive oscillators, we obtain the following equation for the phase difference 
 \begin{equation}
     \frac{\partial \chi_n}{\partial t} = \Delta - f(\chi_{n-1}) + 2 f(\chi_n) - f(\chi_{n+1})\quad\text{for }n=2,\dots,N-2, \label{eq:diff}
