@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendices}
+
+%Some Table of Contents entry formatting
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchapnumwidth}{6em}}
+
+%Begin individual appendices, separated as chapters
+
+\chapter{Supplemental material for chapter 5}
+
+%%%END OF MAIN TEXT%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ Perturbation Solution}
+
+We write the governing equations (\ref{eq:theta}) and (\ref{eq:psi}) for the Euler angles $\theta(t)$ and $\psi(t)$ as 
+\begin{align}
+    d_t\theta &= \partial_{\tau}  \theta + \omega \partial_T = f(\theta,\psi)
+    \\
+    d_t\psi &= \partial_{\tau} \psi +\omega \partial_T \psi = g(\theta,\psi)
+\end{align}
+Substituting the expansions (\ref{eq:thetaPower}) and (\ref{eq:psiPower}), we collect like powers in $\omega$ and solve the hierarchy of perturbation equations to derive the components of the particle velocity (\ref{eq:averageU}) presented in the main text.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Zeroth Order, $O(\omega^0)$}
+
+The zeroth order equations are 
+\begin{align}
+    \partial_{\tau} \theta_0 = f(\theta_0,\psi_0)
+    \\
+    \partial_{\tau} \psi_0 = g(\theta_0,\psi_0)
+\end{align}
+On time scales of order unity, the time derivatives relax to zero, and the orientation of the particle is specified by the applied field. The resulting solution is 
+\begin{align}
+    \theta_0(\infty,T) &= \mathrm{atan2}((B_x^2+B_y^2)^{1/2},B_z) \label{eq:theta0}
+    \\
+    \psi_0(\infty,T) &= \mathrm{atan2}(B_x,-B_y) \label{eq:psi0}
+\end{align}
+where $\mathrm{atan2}(y,x)$ is the 2-argument arctangent function. Note that the components of the applied field depend on the slow time---for example, $B_x = B_x(T)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{First Order, $O(\omega^1)$}
+
+The first order equations are 
+\begin{align}
+    \partial_T \theta_0 + \partial_{\tau} \theta_1 &= \theta_1 \partial_{\theta} f(\theta_0,\psi_0) + \psi_1 \partial_{\psi} f(\theta_0,\psi_0)
+    \\
+    \partial_T \psi_0 + \partial_{\tau} \psi_1 &= \theta_1 \partial_{\theta} g(\theta_0,\psi_0) + \psi_1 \partial_{\psi} g(\theta_0,\psi_0)
+\end{align}
+Substituting the zeroth order solution (\ref{eq:theta0}) and (\ref{eq:psi0}), we find the following solution for the first order quantities as $\tau\rightarrow \infty$ 
+\begin{align}
+    \theta_1(\infty,T) &= \frac{B_{xy} \dot{B}_z -( B_x \dot{B}_x + B_y \dot{B}_y)B_z}{B_{xy}B^3 } \label{eq:theta1}
+    \\
+    \psi_1(\infty,T) & = \frac{B(B_y \dot{B}_x - B_x \dot{B}_y)}{B_{xy}^2(\lambda B_{xy}^2 + B_z^2)} \label{eq:psi1}
+\end{align}
+where $B=(B_x^2+B_y^2+B_z^2)^{1/2}$ is the field magnitude, $B_{xy}=(B_x^2+B_y^2)^{1/2}$ is the magnitude of the field projected onto the $xy$ plane, and the dots denote derivatives with respect to the slow time.  Using these expressions, the first order contribution to the particle velocity in the $x$ direction is 
+\begin{equation}
+%    U_x^{(1)}(T) = \frac{B_y B_z}{B}\psi_1 - \frac{B_x B}{B_{xy}} \theta_1
+    U_x^{(1)}(T) = \kappa  \left(\frac{(B_z \dot{B}_x - B_x \dot{B}_z)}{B^2} +  (\lambda-1)\frac{B_y B_z (B_x \dot{B}_y - B_y \dot{B}_x)}{B^2(\lambda B^2_{xy} + B_z^2)} \right) \label{eq:Ux1}
+\end{equation}
+The velocity in the $y$ direction can be obtained by permuting the $x$ and $y$ indices.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Second Order, $O(\omega^2)$}
+
+The second order equations are 
+\begin{align}
+    \partial_T \theta_1 + \partial_{\tau} \theta_2 &= -B \theta_2 - \frac{B_z B_{xy}}{2B}\psi_1^2
+    \\
+    \partial_T \psi_1 + \partial_{\tau} \psi_2 &=  -\frac{\lambda B_{xy}^2 + B_z^2}{B} \psi _2 - \frac{B_z (B^2 - (\lambda-1)B_{xy}^2)}{B_{xy} B}  \theta_1 \psi_1 
+\end{align}
+In the limit as $\tau\rightarrow\infty$, the second order solutions can be expressed in terms of the first order solutions (\ref{eq:theta1}) and (\ref{eq:psi1}) as 
+\begin{align}
+    \theta_2(\infty,T) &= - \frac{1}{B}\partial_T \theta_1 - \frac{B_z B_{xy}}{2 B^2} \psi_1^2 \label{eq:theta2}
+    \\
+    \psi_2(\infty,T) &= - \frac{B }{\lambda B_{xy}^2 + B_z^2} \partial_T \psi_1 - \frac{B_z (B^2 - (\lambda-1)B_{xy}^2)}{B_{xy} (\lambda B_{xy}^2 + B_z^2)}  \theta_1 \psi_1  \label{eq:psi2}
+\end{align}
+The second order contribution to the particle velocity in the $x$ direction is 
+\begin{equation}
+    U_x^{(2)}(T) = \kappa  \left(\frac{B_y B_z}{B}\psi_2 - \frac{B B_x}{B_{xy}} \theta_2 + \frac{B_x B_z}{2 B}\psi_1^2 + \frac{B_y B_z^2}{B B_{xy}}\theta_1 \psi_1 \right)
+\end{equation}
+where $\theta_2$ and $\psi_2$ are given by equations (\ref{eq:theta2}) and (\ref{eq:psi2}), $\theta_1$ and $\psi_1$ by equations (\ref{eq:theta1}) and (\ref{eq:psi1}). The velocity in the $y$ direction can be obtained by permuting the $x$ and $y$ indices.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rotational Symmetry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Zeroth Order, $O(\alpha^0)$}
+
+For fields $\ve{B}'(T)$ with rotational symmetry satisfying equation (\ref{eq:rotation}), the average velocity $\langle\ve{U}_{10}\rangle$ is identically zero as stated in equation (\ref{eq:alpha0}). To show this, we first note that an integral over one period of a periodic function is invariant to a shift in phase 
+\begin{equation}
+    \langle\ve{U}_{10}\rangle = \frac{1}{2\pi}\int_0^{2\pi} \ve{U}_{10}(\ve{B}'(T-\varphi_m)) dT
+\end{equation}
+where $\varphi_m=2\pi/m$. Using equation (\ref{eq:rotation}) for rotational symmetry, we can write the average velocity as 
+\begin{equation}
+    \langle\ve{U}_{10}\rangle = \frac{1}{2\pi}\int_0^{2\pi} \ve{U}_{10}(R_3(\varphi_m)\ve{B}'(T)) dT
+\end{equation}
+Similar equations hold for other integer multiples of the angle $\varphi_m$.  By averaging over the first $m$ multiples, we can write 
+\begin{equation}
+    \langle\ve{U}_{10}\rangle = \frac{1}{2\pi}\int_0^{2\pi} \left[\frac{1}{m} \sum_{n=0}^{m-1} \ve{U}_{10}(R_z(n \varphi_m)\ve{B}'(T)) \right] dT = 0 \label{eq:trick}
+\end{equation}
+where the integrand is identically zero. Note that the instantaneous velocity $\ve{U}_{10}$ is given by equation (\ref{eq:Ux1}) since $\ve{B}'(T)=\ve{B}(T)$ at zeroth order in $\alpha$. Using the same arguments, it can be show that the average velocity $\langle\ve{U}_{20}\rangle$ is also zero as stated in equation (\ref{eq:alpha0}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{First Order, $O(\alpha^1)$}
+
+For fields $\ve{B}'(T)$ with rotational symmetry satisfying equation (\ref{eq:rotation}), the average velocity $\langle U_y^{(11)}\rangle$ parallel to the gradient direction is identically zero as implied by equation (\ref{eq:alpha1}). To show this, we use the rotational symmetry of the field to simplify the integrand as in equation (\ref{eq:trick}) above 
+\begin{equation}
+    \langle U_y^{(11)}\rangle = \frac{1}{2\pi}\int_0^{2\pi} \left[\frac{1}{m} \sum_{n=0}^{m-1} U_y^{(10)}(R_z(n \varphi_m)\ve{B}'(T)) \right] dT
+\end{equation}
+The resulting integral can then be simplified as 
+\begin{equation}
+    \langle U_y^{(11)}\rangle = \frac{\kappa}{8\pi}\int_0^{2\pi} \frac{d}{d T}  \ln \left(\frac{2 (\lambda -1) {B'_{xy}}^2}{{B'}^2}+2 \right) dT = 0
+\end{equation}
+where the second equality follows from the periodicity of the field.  By contrast, the average velocity in the $x$-direction (perpendicular to the gradient) is non-zero 
+\begin{equation}
+    \langle U_x^{(11)}\rangle =\kappa \int_0^{2\pi} \frac{ (  \lambda(\lambda +1) {B_{xy}'}^2 + (3 \lambda -1) {B'_z}^2)(B'_x \dot{B}'_y - B'_y \dot{B}'_x)}{4\pi (\lambda  {B'_{xy}}^2 +{B'_z}^2)^2} dT \label{eq:Ux11}
+\end{equation}
+where the integrand has been simplified using the rotational symmetry of the field.
+\end{appendices}
